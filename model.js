@@ -1,4 +1,8 @@
 const model = {
+    login: {
+        user: '',
+        password: '',
+    },
     registerPage: {
         firstName: 'Ola',
         surName: 'Nordmann',
@@ -36,6 +40,10 @@ const model = {
             },
         ],
         recipe: '',
+    },
+    suggestedMeals: {
+        suggestedMealsStart: 0,
+        missingIngredients: [],
     },
     savedMeals: [
         {

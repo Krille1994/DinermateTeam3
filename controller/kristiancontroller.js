@@ -1,3 +1,5 @@
+// Funksjoner for create a meal siden
+
 function addIngredientCreateMeal() {
     let newIngredient = {
         ingredient: '',
@@ -34,3 +36,6 @@ function saveMeal() {
     }
     createMealView();
 }
+
+
+// Funksjoner for Suggested Meals
