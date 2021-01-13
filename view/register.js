@@ -1,7 +1,5 @@
 const htmlRegisterDiv = document.getElementById('app');
 
-
-
 function registerView() {
     htmlRegisterDiv.innerHTML = `
                         <div>
