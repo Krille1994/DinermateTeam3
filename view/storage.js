@@ -49,19 +49,4 @@ function storageView() {
     `
 }
 
-function saveItemToStorage() {
-    let item = document.getElementById('newStorageItem');
-    let quantity = document.getElementById('newStorageQuantity');
-    let expdate = document.getElementById('newStorageExpDate');
-
-    model.storage.push({
-        item: item.value,
-        quantity: quantity.value,
-        date: expdate.value,
-    },);
-
-    console.log(model.storage);
-
-    addNewItemToStoragePage();
-}
 
