@@ -2,7 +2,7 @@ const htmlStorageDiv = document.getElementById('app');
 let addItemStorageHtml = '';
 
 
-function addToStorage() {
+function addNewItemToStoragePage() {
     addItemStorageHtml = `
     <div id="addNewItem" onclick="selectStorageItem(this)">
         <div id="addItemToStorage">
@@ -13,7 +13,7 @@ function addToStorage() {
             <input type="text" id="newStorageQuantity" value=""></br>
             <label for="expdate">Expiration date:</label></br>
             <input type="date" id="newStorageExpDate" value=""></br>
-            <button>Save to storage</button>
+            <button onclick="saveItemToStorage();">Save to storage</button>
         </div>
     </div>
 `
@@ -41,10 +41,27 @@ function storageView() {
                                     </div>
                                         ${addItemStorageHtml}
                                     <div id="storageButtons">
-                                        <button id="storageAddNewItem" onclick="addToStorage()">Add new item</button>
+                                        <button id="storageAddNewItem" onclick="addNewItemToStoragePage()">Add new item</button>
                                         <button ${disableStorageButton} id="storageDeleteItem" onclick="deleteStorageItem">Delete item</button>
                                         <button ${disableStorageButton} id="storageChangeItem">Change item</button>
                                     </div>
                                 </div>
     `
 }
+
+function saveItemToStorage() {
+    let item = document.getElementById('newStorageItem');
+    let quantity = document.getElementById('newStorageQuantity');
+    let expdate = document.getElementById('newStorageExpDate');
+
+    model.storage.push({
+        item: item.value,
+        quantity: quantity.value,
+        date: expdate.value,
+    },);
+
+    console.log(model.storage);
+
+    addNewItemToStoragePage();
+}
+

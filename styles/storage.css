@@ -31,13 +31,14 @@
     text-align: center;
     padding: 30px;
     padding-bottom: 50px;
-    position: absolute;
-    bottom: 500px;
-    right: 1150px;
+    position: relative;
+    top: -600px;
+    width: 300px;
+    left: 900px;
 }
 
 #exitAddToStorage {
     position: relative;
     top: -40px;
-    left: 150px;
+    left: 200px;
 }
