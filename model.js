@@ -1,4 +1,8 @@
 const model = {
+    login: {
+        user: '',
+        password: '',
+    },
     registerPage: {
         firstName: 'Ola',
         surName: 'Nordmann',
@@ -7,12 +11,19 @@ const model = {
     },
     users:[
         {
-            username: '',
-            password: '',
-            firstName: '',
-            surName: '',
+            username: 'ola.nordmann@mail.no',
+            password: '123',
+            firstname: 'Ola',
+            surname: 'Nordmann',
+        },
+        {
+            username: 'robin.nordmann@mail.no',
+            password: '123',
+            firstname: 'Robin',
+            surname: 'Nordmann',
         },
     ],
+    
     mainPage: {
         
     },
