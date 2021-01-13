@@ -11,12 +11,19 @@ const model = {
     },
     users:[
         {
-            username: '',
-            password: '',
-            firstName: '',
-            surName: '',
+            username: 'ola.nordmann@mail.no',
+            password: '123',
+            firstname: 'Ola',
+            surname: 'Nordmann',
+        },
+        {
+            username: 'robin.nordmann@mail.no',
+            password: '123',
+            firstname: 'Robin',
+            surname: 'Nordmann',
         },
     ],
+    
     mainPage: {
         
     },
@@ -119,22 +126,159 @@ const model = {
             ],
             recipe: '',
         },
+        {
+            mealName: 'Pizza',
+            ingredients: [
+                {
+                    ingredient: 'Flour',
+                    quantity: '250g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Yeast',
+                    quantity: '10g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Pizzasauce',
+                    quantity: '1 cup',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Cheese',
+                    quantity: '100g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Ham',
+                    quantity: '80g',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Mushrooms',
+                    quantity: '80g',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Onion',
+                    quantity: '1/2',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Mushrooms',
+                    quantity: '80g',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Pinapple',
+                    quantity: '1/2 box',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Pizzaspices',
+                    quantity: '',
+                    optional: false,
+                },
+                {
+                    mealName: 'Egg, bacon & Beans',
+                    ingredients: [
+                        {
+                            ingredient: 'Eggs',
+                            quantity: '4',
+                            optional: false,
+                        },
+                        {
+                            ingredient: 'Bacon',
+                            quantity: '100g',
+                            optional: false,
+                        },
+                        {
+                            ingredient: 'Beans',
+                            quantity: '120g',
+                            optional: false,
+                        },
+                        {
+            mealName: 'Chicken & Spinnach',
+            ingredients: [
+                {
+                    ingredient: 'Chicken',
+                    quantity: '400g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Spinnach',
+                    quantity: '100g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Pasta',
+                    quantity: '120g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Cheese',
+                    quantity: '100g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Garlic',
+                    quantity: '2 cloves',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Maizenna',
+                    quantity: '1 spoon',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Olive-oil',
+                    quantity: '50ml',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Parmezan',
+                    quantity: '60g',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Spring union',
+                    quantity: '2 cloves',
+                    optional: true,
+                },
+            ],
+            recipe: '',
+        },
     ],
     storage: [
         {
             item: 'Chicken',
             quantity: '400g',
-            date: '15/1-21',
+            date: '2021-01-05',
         },
         {
             item: 'Pasta',
             quantity: '200g',
-            date: '12/4-26',
+            date: '2025-02-03',
         },
         {
             item: 'Broccoli',
             quantity: '1',
             date: '',
+        },
+        {
+            item: 'Carrots',
+            quantity: '8',
+            date: '',
+        },
+        {
+            item: 'Potatoes',
+            quantity: '1000g',
+            date: '2021-02-03',
+        },
+        {
+            item: 'Broccoli',
+            quantity: '1',
+            date: '2021-01-28',
         },
     ],
     shoppingList: [
