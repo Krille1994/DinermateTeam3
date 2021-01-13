@@ -1,9 +1,7 @@
-const htmlDiv = document.getElementById('app');
-
-registerView();
+const htmlRegisterDiv = document.getElementById('app');
 
 function registerView() {
-    htmlDiv.innerHTML = `
+    htmlRegisterDiv.innerHTML = `
                         <div>
                                 <label for="fname">First name:</label></br>
                                 <input type="text" id="fname" name="fname" value=""></br>

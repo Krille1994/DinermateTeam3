@@ -1,0 +1,43 @@
+#storageMainDiv {
+    border: solid 1px black;
+    height: 1000px;
+    width: 1600px;
+}
+
+#storageContent {
+    border: solid 1px black;
+    height: 970px;
+    overflow: auto;
+    width: 550px;
+    margin: 10px;
+}
+
+#storageItemsDiv {
+    border: solid 1px black;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+}
+
+#storageButtons {
+    position: absolute;
+    right: 250px;
+    bottom: 180px;
+}
+
+#addNewItem {
+    border: solid 1px black;
+    font-size: 2em;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 50px;
+    position: absolute;
+    bottom: 500px;
+    right: 600px;
+}
+
+#exitAddToStorage {
+    position: relative;
+    top: -40px;
+    left: 150px;
+}

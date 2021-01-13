@@ -1,4 +1,8 @@
 const model = {
+    login: {
+        user: '',
+        password: '',
+    },
     registerPage: {
         firstName: 'Ola',
         surName: 'Nordmann',
@@ -116,12 +120,12 @@ const model = {
         {
             item: 'Chicken',
             quantity: '400g',
-            date: '15/1-21',
+            date: '2021-01-05',
         },
         {
             item: 'Pasta',
             quantity: '200g',
-            date: '12/4-26',
+            date: '2025-02-03',
         },
         {
             item: 'Broccoli',
