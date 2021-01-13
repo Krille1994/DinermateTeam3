@@ -26,6 +26,8 @@ function createUser() {
 
 let disableStorageButton = 'disabled';
 
-function selectStorageItem(element) {
-    element.style.border = '1px solid red';
+function leaveAddToStorage() {
+    addItemStorageHtml = '';
+    storageView();
 }
+

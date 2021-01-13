@@ -21,7 +21,7 @@
 
 #storageButtons {
     position: absolute;
-    right: 250px;
+    left: 1300px;
     bottom: 180px;
 }
 
@@ -33,7 +33,7 @@
     padding-bottom: 50px;
     position: absolute;
     bottom: 500px;
-    right: 600px;
+    right: 1150px;
 }
 
 #exitAddToStorage {

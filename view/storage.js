@@ -1,10 +1,30 @@
 const htmlStorageDiv = document.getElementById('app');
+let addItemStorageHtml = '';
+
+
+function addToStorage() {
+    addItemStorageHtml = `
+    <div id="addNewItem" onclick="selectStorageItem(this)">
+        <div id="addItemToStorage">
+            <button id="exitAddToStorage" onclick="leaveAddToStorage()">X</button>
+            <label for="item">Item:</label></br>
+            <input type="text" id="newStorageItem" value=""></br>
+            <label for="quantity">Quantity:</label></br>
+            <input type="text" id="newStorageQuantity" value=""></br>
+            <label for="expdate">Expiration date:</label></br>
+            <input type="date" id="newStorageExpDate" value=""></br>
+            <button>Save to storage</button>
+        </div>
+    </div>
+`
+storageView();
+
+}
 
 storageView();
 function storageView() {
     let storageItems = model.storage;
     let storageHtml = '';
-    let addItemStorageHtml = '';
     // Loops through all items in model.storage and creates a div for each.
     for (let i = 0; i < storageItems.length; i++) {
         storageHtml += `<div id="storageItemsDiv" onclick="selectStorageItem(this)">
@@ -14,33 +34,14 @@ function storageView() {
                         </div>`;
     }
 
-    addItemStorageHtml = `
-                        <div id="addItemToStorage">
-                            <button id="exitAddToStorage">X</button>
-                            <label for="item">Item:</label></br>
-                            <input type="text" id="newStorageItem" value=""></br>
-                            <label for="quantity">Quantity:</label></br>
-                            <input type="text" id="newStorageQuantity" value=""></br>
-                            <label for="expdate">Expiration date:</label></br>
-                            <input type="date" id="newStorageExpDate" value=""></br>
-                            <button>Save to storage</button>
-                        </div>
-    `
-
-
-
     htmlStorageDiv.innerHTML = `
                                 <div id="storageMainDiv">
                                     <div id="storageContent">
                                         ${storageHtml}
                                     </div>
-
-                                    <div id="addNewItem">
                                         ${addItemStorageHtml}
-                                    </div>
-
                                     <div id="storageButtons">
-                                        <button id="storageAddNewItem">Add new item</button>
+                                        <button id="storageAddNewItem" onclick="addToStorage()">Add new item</button>
                                         <button ${disableStorageButton} id="storageDeleteItem" onclick="deleteStorageItem">Delete item</button>
                                         <button ${disableStorageButton} id="storageChangeItem">Change item</button>
                                     </div>
