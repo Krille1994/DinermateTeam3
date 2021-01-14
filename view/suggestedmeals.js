@@ -1,71 +1,99 @@
 function suggestedMealsView() {
     let html = `
-        <div id="suggestedMealsHeader">Suggested Meals:</div>
-        <button id="suggestedMealsLeft">Left</button>
-        <button id="suggestedMealsRight">Right</button>
+        <h1 id="suggestedMealsHeader">Suggested Meals:</h1>
+        <button id="suggestedMealsLeft" onclick="nextSuggestedMeals(false)">Left</button>
+        <button id="suggestedMealsRight" onclick="nextSuggestedMeals(true)">Right</button>
     `;
-    let suggestedMealsEnd = model.suggestedMeals.suggestedMealsStart + 4;
-    for (let i = model.suggestedMeals.suggestedMealsStart; i < suggestedMealsEnd; i++) {
-        resetSuggestedMeals();
-        suggestedMealsValid(i);
+    let start = model.suggestedMeals.suggestedMealsStart;
+    let end = model.suggestedMeals.suggestedMealsStart + 4;
+    // loop som skal lage 4 foreslåtte måltider
+    for (let i = start; i < end; i++) {
+        // tømmer missingIngredients
+        model.suggestedMeals.missingIngredients = [];
+
+        missingIngredients(i);
         if (model.suggestedMeals.missingIngredients.length == 0) {
             html += `
                 <div>
-                    <h1>${model.savedMeals[i].mealName}</h1><br>
-                    <h3>Missing:</h3>
-                    `;
-                    let 
-                    for (let o = 0; o < model.suggestedMeals.missingIngredients.length; o++) {
-                        if ()
-                        html += `
-                            
-                        `;
-                    }
-                </div
+                    <h1>${model.savedMeals[i].mealName}</h1>
+                    <div>Green Checkmark</div>
+                    <button>Start Cooking</button>
+                </div>
             `;
         }
-        else
-        {
-            let validity = 0;
-            let tempHtml = '';
-            for (let u = 0; u < model.suggestedMeals.missingIngredients.length; u++) {
-                if (!model.suggestedMeals.missingIngredients[u].optional) {
-                    validity++;
-                    if (validity <= 3) {
-                        tempHtml = '';
-                        suggestedMealsEnd++;
+        else if(threeMissingIngredients()) {
+            end++;
+        }
+        else {
+            html += `
+                <div>
+                <h1>${model.savedMeals[i].mealName}</h1>
+                <div>Missing:</div>
+                `;
+                let missIngr = model.suggestedMeals.missingIngredients;
+                    for (let j = 0; j < missIngr.length; j++) {
+                        if (missIngr[j].optional) {
+                            html += `
+                                    <div style="color: orange;">${missIngr[j].ingredient}</div>
+                                `;
+                        }
+                        else {
+                            html += `
+                                    <div style="color: red;">${missIngr[j].ingredient}</div>
+                                `;
+                        }
                     }
-                    tempHtml += `
-                        
-
-                    `;
-                }
+                html += `
+                    <button>Start Cooking</button>
+                    </div>
+                `;
+            
             }
+        if (i == model.savedMeals.length-1) {
+            i = 0;
+            end -= model.savedMeals.length-1;
         }
     }
-    
-    
+    document.getElementById('app').innerHTML = html;
 }
-function suggestedMealsValid(index) {
+
+// legger manglende ingredienser i missingIngredients
+function missingIngredients(index) {
     let food = model.savedMeals[index].ingredients;
     for (let i = 0; i < food.length; i++) {
-        if(!suggestedMealsValidHelp(i, food)) {
+        if (!missingIngredientsHelp(food, i)) {
             let x = {
-                ingredient: food[i].ingredient,
-                optional: food[i].optional,
-            }
+                ingredient: model.savedMeals[index].ingredients[i].ingredient,
+                optional: model.savedMeals[index].ingredients[i].optional,
+            };
             model.suggestedMeals.missingIngredients.push(x);
         }
     }
 }
-function suggestedMealsValidHelp(i, food) {
-    for (let j = 0; j < model.storage.length; j++) {
-            if(food[i].ingredient == model.storage[j].item) {
-                return true;   
-            }
-            else {return false;}
+
+// funksjon som returnerer true hvis ingrediensen er i storage
+function missingIngredientsHelp(food, iIndex) {
+    for (let u = 0; u < model.storage.length; u++) {
+        if (food[iIndex].ingredient == model.storage[u].item) {
+            return true;
+        }
     }
+    return false;
 }
-function resetSuggestedMeals() {
-    model.suggestedMeals.missingIngredients = [];
+
+// Funksjon som sjekker om flere enn 3 ingredienser som ikke er optional er i missingIngredients
+function threeMissingIngredients() {
+    let missing = 0;
+    let ingr = model.suggestedMeals.missingIngredients;
+    for (let i = 0; i < ingr.length; i++) {
+        if (!ingr[i].optional) {
+            missing++
+        }
+    }
+    if (missing >= 4) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }

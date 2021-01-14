@@ -39,3 +39,19 @@ function saveMeal() {
 
 
 // Funksjoner for Suggested Meals
+
+function nextSuggestedMeals(value) {
+    if (value) {
+        model.suggestedMeals.suggestedMealsStart += 4;
+        if (model.suggestedMeals.suggestedMealsStart >= model.savedMeals.length) {
+            model.suggestedMeals.suggestedMealsStart -= model.savedMeals.length;
+        }
+    }
+    else {
+        model.suggestedMeals.suggestedMealsStart -= 4;
+        if (model.suggestedMeals.suggestedMealsStart < 0) {
+            model.suggestedMeals.suggestedMealsStart += model.savedMeals.length ;
+        }
+    }
+    suggestedMealsView();
+}

@@ -80,6 +80,54 @@ const model = {
             recipe: '',
         },
         {
+            mealName: 'temporary1',
+            ingredients: [
+                {
+                    ingredient: 'Minced Meat',
+                    quantity: '400g',
+                    optional: false,
+                },
+            ],
+            recipe: '',
+        },
+        {
+            mealName: 'temporary2',
+            ingredients: [
+                {
+                    ingredient: 'Minced Meat',
+                    quantity: '400g',
+                    optional: false,
+                },
+            ],
+            recipe: '',
+        },
+        {
+            mealName: 'temporary3',
+            ingredients: [
+                {
+                    ingredient: 'Minced Meat',
+                    quantity: '400g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Missing Ingredient',
+                    quantity: '400g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Missing Ingredient',
+                    quantity: '400g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Missing Ingredient',
+                    quantity: '400g',
+                    optional: false,
+                },
+            ],
+            recipe: '',
+        },
+        {
             mealName: 'Taco',
             ingredients: [
                 {
@@ -366,6 +414,31 @@ const model = {
         },
     ],
     storage: [
+        {
+            item: 'Minced Meat',
+            quantity: '400g',
+            date: '2021-04-05',
+        },
+        {
+            item: 'Tortillas',
+            quantity: '4',
+            date: '2021-04-05',
+        },
+        {
+            item: 'Cheese',
+            quantity: '100g',
+            date: '2021-04-05',
+        },
+        {
+            item: 'Sour Cream',
+            quantity: '',
+            date: '2021-04-05',
+        },
+        {
+            item: 'Beans',
+            quantity: '120g',
+            date: '2021-04-04',
+        },
         {
             item: 'Chicken',
             quantity: '400g',
