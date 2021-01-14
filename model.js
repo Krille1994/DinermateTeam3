@@ -181,6 +181,118 @@ const model = {
                 },
             ],
         },
+        {
+            mealName: 'Mediterranean Lamb Burgers',
+            ingredients: [
+                {
+                    ingredient: 'Ground lamb',
+                    quantity: '400g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'ground beef',
+                    quantity: '200g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'mint',
+                    quantity: '3 tablespoons',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Garlic',
+                    quantity: '1 clove',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Greek yoghurt',
+                    quantity: '40g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'tomato',
+                    quantity: '4 slices',
+                    optional: true,
+                },
+                {
+                    ingredient: 'Onion',
+                    quantity: '1/4',
+                    optional: true,
+                },
+                {
+                    ingredient: 'feta cheese',
+                    quantity: '30g',
+                    optional: true,
+                },
+                {
+                    ingredient: 'ciabatta sandwich rolls',
+                    quantity: '2',
+                    optional: false,
+                },
+                {
+                    ingredient: 'arugula leaves',
+                    quantity: '8',
+                    optional: true,
+                },
+            ],
+        },
+
+        {
+            mealName: 'Rosemary Braised Lamb Shanks',
+            ingredients: [
+                {
+                    ingredient: 'Lamb shanks',
+                    quantity: '6',
+                    optional: false,
+                },
+                {
+                    ingredient: 'carrots',
+                    quantity: '80g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'red wine',
+                    quantity: '500ml',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Garlic',
+                    quantity: '5 cloves',
+                    optional: false,
+                },
+                {
+                    ingredient: 'chicken broth',
+                    quantity: '100ml',
+                    optional: false,
+                },
+                {
+                    ingredient: 'tomato',
+                    quantity: '2',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Onion',
+                    quantity: '2',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Beef broth',
+                    quantity: '100ml',
+                    optional: false,
+                },
+                {
+                    ingredient: 'rosemary',
+                    quantity: '5 teaspoons',
+                    optional: true,
+                },
+                {
+                    ingredient: 'thyme',
+                    quantity: '2 teaspoons',
+                    optional: true,
+                },
+            ],
+        },
+        
                 {
                     mealName: 'Egg, bacon & Beans',
                     ingredients: [
