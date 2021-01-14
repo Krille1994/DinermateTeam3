@@ -179,6 +179,8 @@ const model = {
                     quantity: '',
                     optional: false,
                 },
+            ],
+        },
                 {
                     mealName: 'Egg, bacon & Beans',
                     ingredients: [
@@ -197,6 +199,8 @@ const model = {
                             quantity: '120g',
                             optional: false,
                         },
+                    ],
+                },
                         {
             mealName: 'Chicken & Spinnach',
             ingredients: [
