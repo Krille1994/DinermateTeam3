@@ -4,8 +4,8 @@ const model = {
         password: '',
     },
     registerPage: {
-        firstName: 'Ola',
-        surName: 'Nordmann',
+        firstname: 'Ola',
+        surname: 'Nordmann',
         email: 'ola.nordmann@mail.no',
         password: '*******',
     },
@@ -280,9 +280,39 @@ const model = {
             date: '2021-02-03',
         },
         {
-            item: 'Broccoli',
+            item: 'mustard',
             quantity: '1',
-            date: '2021-01-28',
+            date: '2022-04-22',
+        },
+        {
+            item: 'Paprika',
+            quantity: '2',
+            date: '2021-02-03',
+        },
+        {
+            item: 'Celery',
+            quantity: '2 stalks',
+            date: '2021-02-10',
+        },
+        {
+            item: 'Tomatoes',
+            quantity: '2',
+            date: '2021-01-18',
+        },
+        {
+            item: 'Bacon',
+            quantity: '200g',
+            date: '2021-03-17',
+        },
+        {
+            item: 'Peas',
+            quantity: '160g',
+            date: '2022-05-01',
+        },
+        {
+            item: 'Ham',
+            quantity: '400g',
+            date: '2021-06-13',
         },
     ],
     shoppingList: [
