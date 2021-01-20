@@ -25,7 +25,7 @@ const model = {
     ],
     
     mainPage: {
-        
+        userIndex: '',
     },
     createMeal: {
         mealName: 'Hamburger and fries',
@@ -51,6 +51,11 @@ const model = {
     suggestedMeals: {
         suggestedMealsStart: 0,
         missingIngredients: [],
+    },
+    savedMealsValues: {
+        index: false,
+        loopStart: 0,
+        loopEnd: 4,
     },
     savedMeals: [
         {
@@ -340,28 +345,27 @@ const model = {
                 },
             ],
         },
-        
+        {
+            mealName: 'Egg, bacon & Beans',
+            ingredients: [
                 {
-                    mealName: 'Egg, bacon & Beans',
-                    ingredients: [
-                        {
-                            ingredient: 'Eggs',
-                            quantity: '4',
-                            optional: false,
-                        },
-                        {
-                            ingredient: 'Bacon',
-                            quantity: '100g',
-                            optional: false,
-                        },
-                        {
-                            ingredient: 'Beans',
-                            quantity: '120g',
-                            optional: false,
-                        },
-                    ],
+                    ingredient: 'Eggs',
+                    quantity: '4',
+                    optional: false,
                 },
-                        {
+                {
+                    ingredient: 'Bacon',
+                    quantity: '100g',
+                    optional: false,
+                },
+                {
+                    ingredient: 'Beans',
+                    quantity: '120g',
+                    optional: false,
+                },
+            ],
+        },
+        {
             mealName: 'Chicken & Spinnach',
             ingredients: [
                 {

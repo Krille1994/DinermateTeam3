@@ -1,13 +1,13 @@
 // Funksjoner for create a meal siden
 
-function addIngredientCreateMeal() {
+function addIngredientCreateMeal(mealChange) {
     let newIngredient = {
         ingredient: '',
         quantity: '',
         optional: false,
     };
     model.createMeal.ingredients.push(newIngredient);
-    createMealView();
+    mealChange ? createMealView(mealChange) : createMealView();
 }
 function createMealCheckbox(elem, index) {
     let x = model.createMeal.ingredients[index];
@@ -16,7 +16,6 @@ function createMealCheckbox(elem, index) {
     }
     else {
         x.optional = false;
-        console.log(index);
     }
 }
 
@@ -34,7 +33,7 @@ function saveMeal() {
         ],
         recipe: '',
     }
-    createMealView();
+    savedMealsView();
 }
 
 
@@ -54,4 +53,46 @@ function nextSuggestedMeals(value) {
         }
     }
     suggestedMealsView();
+}
+
+// Funksjoner for savedMeals
+
+function savedMealsDisplayNewMeals(bool) {
+    if (bool) {
+        model.savedMealsValues.loopStart += 4;
+        model.savedMealsValues.loopEnd += 4;
+    }
+    else {
+        model.savedMealsValues.loopStart -= 4;
+        model.savedMealsValues.loopEnd -= 4;
+    }
+    savedMealsView();
+}
+
+function deleteMeal() {
+    model.savedMeals.splice(model.savedMealsValues.index, 1);
+    model.savedMealsValues.index = false;
+    savedMealsView();
+}
+function changeMeal() {
+    model.createMeal = model.savedMeals[model.savedMealsValues.index];
+    createMealView(true);
+}
+function saveChangedMeal(index) {
+    model.savedMeals[index] = model.createMeal;
+
+    model.createMeal = {
+        mealName: '',
+        ingredients: [
+            {
+                ingredient: '',
+                quantity: '',
+                optional: false,
+            },
+        ],
+        recipe: '',
+    }
+    model.savedMealsValues.index = false;
+
+    savedMealsView();
 }
