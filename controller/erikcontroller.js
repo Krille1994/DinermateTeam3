@@ -24,7 +24,7 @@ function createUser() {
 
 // storage
 
-let disableStorageButton = 'disabled';
+let disableStorageButton = '';
 
 function leaveAddToStorage() {
     addItemStorageHtml = '';
