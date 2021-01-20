@@ -33,7 +33,7 @@ function selectStorageItem(element) {
 
 function storageView() {
     let storageItems = model.storage;
-    let storageHtml = '';
+    let storageHtml = '<button onclick="mainScreenView()">Go Back</button>';
     // Loops through all items in model.storage and creates a div for each.
     for (let i = 0; i < storageItems.length; i++) {
         storageHtml += `<div id="storageTest">

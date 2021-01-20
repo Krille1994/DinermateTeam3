@@ -1,6 +1,6 @@
-function startCookingView(index) {
+function startCookingView(index, bool) {
     let html = `
-        <button onclick="suggestedMealsView()">Go Back</button>
+        <button onclick="${bool ? 'mainScreenView()' : 'suggestedMealsView()'}">Go Back</button>
         <h1>${model.savedMeals[index].mealName}</h1>
         <div>
             <h1>Ingredients:</h1>

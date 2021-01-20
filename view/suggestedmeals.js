@@ -33,7 +33,7 @@ function suggestedMealsView() {
                         <div>
                             <h1>${model.savedMeals[i].mealName}</h1>
                             <div>Green Checkmark</div>
-                            <button onclick="startCookingView(${i})">Start Cooking</button>
+                            <button onclick="startCookingView(${i}, false)">Start Cooking</button>
                         </div>
                     `;
                     mealsDisplayed.push(i);
@@ -61,7 +61,7 @@ function suggestedMealsView() {
                                 }
                             }
                         html += `
-                            <button onclick="startCookingView(${i})">Start Cooking</button>
+                            <button onclick="startCookingView(${i}, false)">Start Cooking</button>
                             </div>
                         `;
                         mealsDisplayed.push(i);

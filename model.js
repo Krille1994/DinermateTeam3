@@ -17,6 +17,7 @@ const model = {
             surname: 'Nordmann',
         },
         {
+            ID: 1,
             username: 'robin.nordmann@mail.no',
             password: '123',
             firstname: 'Robin',
