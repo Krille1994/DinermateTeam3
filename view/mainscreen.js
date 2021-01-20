@@ -4,7 +4,7 @@ function mainScreenView() {
     <div>Previous</div>
     <div>Next</div>
     <br>
-    <button <i class="fa fa-bank" aria-hidden="true"></i> Storage</button>
+    <button <i class="fa fa-bank" aria-hidden="true" onclick="storageView()"></i> Storage</button>
     <button <i class="fa fa-save" aria-hidden="true" onclick="savedMealsView()"></i> Saved meals</button>
     <button <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping cart</button>
     `

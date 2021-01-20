@@ -30,7 +30,7 @@ function selectStorageItem(element) {
 
 
 
-storageView();
+
 function storageView() {
     let storageItems = model.storage;
     let storageHtml = '';
@@ -38,11 +38,11 @@ function storageView() {
     for (let i = 0; i < storageItems.length; i++) {
         storageHtml += `<div id="storageTest">
                             <div id="storageItemsDiv${i}" onclick="selectStorageItem(this)">
-                                 <p>Item:</p> <input type="text" id="storageItem" value="${storageItems[i].item}">
-                                 <p>Quantity:</p> <input type="text" id="quantityItem" value="${storageItems[i].quantity}">
-                                 <p>Expiration date:</p> <input type="date" id="storageExpDate" value="${storageItems[i].date}">
-                                 <button ${disableStorageButton} id="storageDeleteItem" onclick="deleteStorageItem">Delete item</button>
-                                 <button ${disableStorageButton} id="storageChangeItem">Change item</button>
+                                 <p>Item:</p> <input type="text" class="storageItem" value="${storageItems[i].item}">
+                                 <p>Quantity:</p> <input type="text" class="quantityItem" value="${storageItems[i].quantity}">
+                                 <p>Expiration date:</p> <input type="date" class="storageExpDate" value="${storageItems[i].date}">
+                                 <button ${disableStorageButton} class="storageDeleteItem" onclick="deleteStorageItem">Delete item</button>
+                                 <button ${disableStorageButton} class="storageChangeItem">Change item</button>
                             </div>
                         </div>`;
     }

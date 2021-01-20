@@ -20,6 +20,8 @@ function getRegisteredDetails() {
 function createUser() {
     model.users.push(getRegisteredDetails());
     console.log(model.users);
+
+    loginView();
 } 
 
 // storage
