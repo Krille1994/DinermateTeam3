@@ -9,10 +9,12 @@ function createMealView(mealChange) {
                     <td></td>
                     <td>Quantity</td>
                     <td>Optional</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Meal Name</td>
                     <td><input type="text" value="${model.createMeal.mealName}" onchange="model.createMeal.mealName = this.value"></td>
+                    <td>${mealChange ? '<button onclick="saveChangedMeal(model.savedMealsValues.index)">Save Changes</button>' : '<button onclick="saveMeal()">Save Meal</button>'}</td>
                     <td></td>
                     <td></td>
                 </tr>`;
@@ -29,6 +31,9 @@ function createMealView(mealChange) {
                         </td>
                         <td>
                             <input id="createMealOptionalCheck${i}" type="checkbox" ${ingredients[i].optional ? 'checked' : ''} onclick="createMealCheckbox(this, ${i})">
+                        </td>
+                        <td>
+                            <button onclick="deleteCreateMealIngredient(${mealChange+ ',' +i})">Remove</button>
                         </td>
                     </tr>
                     `;
@@ -48,7 +53,7 @@ function createMealView(mealChange) {
     <div id="createRecipeDiv" style="float: right; width: 40%; height: 90%;">
         <h1>Recipe:</h1>
         <input type="text" style="width: 100%; height: 100%;" value="${model.createMeal.recipe}" onchange="model.createMeal.recipe = this.value">
-    </div>${mealChange ? '<button onclick="saveChangedMeal(model.savedMealsValues.index)">Save Changes</button>' : '<button onclick="saveMeal()">Save Meal</button>'}
+    </div>
     `;
     document.getElementById('app').innerHTML = html;
 }

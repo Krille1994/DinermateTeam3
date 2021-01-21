@@ -96,3 +96,8 @@ function saveChangedMeal(index) {
 
     savedMealsView();
 }
+function deleteCreateMealIngredient(bool, index) {
+    model.createMeal.ingredients.splice(index, 1);
+
+    createMealView(bool);
+}

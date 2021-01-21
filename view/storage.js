@@ -31,7 +31,6 @@ function selectStorageItem(element) {
 }
 
 
-storageView();
 function storageView() {
     let storageItems = model.storage[model.userID];
     let storageHtml = '<button onclick="mainScreenView()">Go Back</button>';
