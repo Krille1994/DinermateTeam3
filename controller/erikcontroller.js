@@ -43,7 +43,7 @@ function saveItemToStorage() {
     let quantity = model.newStorageItem.quantity;
     let date = model.newStorageItem.date;
 
-    model.storage.push({
+    model.storage[model.userID].push({
         item: item,
         quantity: quantity,
         date: date,
