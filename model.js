@@ -54,7 +54,7 @@ const model = {
     savedMealsValues: {
         index: false,
         loopStart: 0,
-        loopEnd: 4,
+        loopEnd: 8,
     },
     savedMeals: [
         [
