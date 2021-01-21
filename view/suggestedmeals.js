@@ -15,7 +15,7 @@ function suggestedMealsView() {
         if (mealsDisplayed.includes(i)) {}
         else {
             i == 0 ? count++ : '';
-            if (count >= 4 || model.savedMeals[i] === undefined) {
+            if (count >= 4 || model.savedMeals[model.userID][i] === undefined) {
                 count = 0;
                 html += `
                 <div>
@@ -31,7 +31,7 @@ function suggestedMealsView() {
                 if (model.suggestedMeals.missingIngredients.length == 0) {
                     html += `
                         <div>
-                            <h1>${model.savedMeals[i].mealName}</h1>
+                            <h1>${model.savedMeals[model.userID][i].mealName}</h1>
                             <div>Green Checkmark</div>
                             <button onclick="startCookingView(${i}, false)">Start Cooking</button>
                         </div>
@@ -44,7 +44,7 @@ function suggestedMealsView() {
                 else {
                     html += `
                         <div>
-                        <h1>${model.savedMeals[i].mealName}</h1>
+                        <h1>${model.savedMeals[model.userID][i].mealName}</h1>
                         <div>Missing:</div>
                         `;
                         let missIngr = model.suggestedMeals.missingIngredients;
@@ -66,9 +66,9 @@ function suggestedMealsView() {
                         `;
                         mealsDisplayed.push(i);
                     }
-                if (i == model.savedMeals.length-1) {
+                if (i == model.savedMeals[model.userID].length-1) {
                     i = 0;
-                    end -= model.savedMeals.length-1;
+                    end -= model.savedMeals[model.userID].length-1;
                 }
             }
         }
@@ -78,12 +78,12 @@ function suggestedMealsView() {
 
 // legger manglende ingredienser i missingIngredients
 function missingIngredients(index) {
-    let food = model.savedMeals[index].ingredients;
+    let food = model.savedMeals[model.userID][index].ingredients;
     for (let i = 0; i < food.length; i++) {
         if (!missingIngredientsHelp(food, i)) {
             let x = {
-                ingredient: model.savedMeals[index].ingredients[i].ingredient,
-                optional: model.savedMeals[index].ingredients[i].optional,
+                ingredient: model.savedMeals[model.userID][index].ingredients[i].ingredient,
+                optional: model.savedMeals[model.userID][index].ingredients[i].optional,
             };
             model.suggestedMeals.missingIngredients.push(x);
         }
@@ -92,8 +92,8 @@ function missingIngredients(index) {
 
 // funksjon som returnerer true hvis ingrediensen er i storage
 function missingIngredientsHelp(food, iIndex) {
-    for (let u = 0; u < model.storage.length; u++) {
-        if (food[iIndex].ingredient == model.storage[u].item) {
+    for (let u = 0; u < model.storage[model.userID].length; u++) {
+        if (food[iIndex].ingredient == model.storage[model.userID][u].item) {
             return true;
         }
     }

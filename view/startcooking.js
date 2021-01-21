@@ -1,12 +1,12 @@
 function startCookingView(index, bool) {
     let html = `
         <button onclick="${bool ? 'mainScreenView()' : 'suggestedMealsView()'}">Go Back</button>
-        <h1>${model.savedMeals[index].mealName}</h1>
+        <h1>${model.savedMeals[model.userID][index].mealName}</h1>
         <div>
             <h1>Ingredients:</h1>
             <ul>
     `;
-    let food = model.savedMeals[index].ingredients;
+    let food = model.savedMeals[model.userID][index].ingredients;
     for (let i = 0; i < food.length; i++) {
         html += `
             <li>${food[i].ingredient} ${food[i].quantity}</li>
@@ -18,7 +18,7 @@ function startCookingView(index, bool) {
         <div>
             <h1>Recipe:</h1>
             <div>
-                ${model.savedMeals[index].recipe}
+                ${model.savedMeals[model.userID][index].recipe}
             </div>
         </div>
     `;

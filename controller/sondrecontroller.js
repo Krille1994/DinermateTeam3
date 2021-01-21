@@ -2,7 +2,7 @@
 function checkLogin(){
     if(checkLoginHelp() !== false){
         let i= checkLoginHelp();
-        model.mainPage.userIndex = i;
+        model.userID = i;
         mainScreenView();
     }
     else {

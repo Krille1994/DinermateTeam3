@@ -14,7 +14,8 @@ function getRegisteredDetails() {
     return {username: model.registerPage.email,
             password: model.registerPage.password,
             firstname: model.registerPage.firstname,
-            surname: model.registerPage.surname};
+            surname: model.registerPage.surname,
+            ID: model.users.length +1};
 }
 
 function createUser() {
@@ -38,13 +39,13 @@ function saveItemToStorage() {
     let quantity = document.getElementById('newStorageQuantity');
     let expdate = document.getElementById('newStorageExpDate');
 
-    model.storage.push({
+    model.storage[model.userID].push({
         item: item.value,
         quantity: quantity.value,
         date: expdate.value,
     },);
 
-    console.log(model.storage);
+    console.log(model.storage[model.userID]);
 
     addNewItemToStoragePage();
 }
