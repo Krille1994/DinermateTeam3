@@ -1,17 +1,22 @@
-
+mainScreenView();
 function mainScreenView() {
     let html = `
-    <h1>Hallo, ${model.users[model.userID].firstname} ${model.users[model.userID].surname}!</h1>
-    <div>
-        <button onclick="suggestedMealsView()">Suggested Meals</button>
-        <div>${mainScreenSuggestedMeal()}</div>
-        <div>Previous</div>
-        <div>Next</div>
-    </div>
-    <br>
-    <button onclick="storageView()">Storage</button>
-    <button onclick="savedMealsView()">Saved meals</button>
-    <button >Shopping cart</button>
+        <div id="mainContent">
+            <div id="header">
+                <h1>Hallo, ${model.users[model.userID].firstname} ${model.users[model.userID].surname}!</h1>
+            </div>
+
+            <div id="suggestedMeals">
+                <button id="suggestedMealsButton" onclick="suggestedMealsView()">Suggested Meals</button>
+                <div>${mainScreenSuggestedMeal()}</div>
+                <button id="randomMealButton">Next</button>
+            </div>
+            <div id="navigateButtons">
+                 <button id="storageButton" onclick="storageView()">Storage</button>
+                 <button id="savedMealsButton" onclick="savedMealsView()">Saved meals</button>
+                 <button id="shoppingCartButton">Shopping cart</button>
+            </div>
+        </div>
     `
     document.getElementById('app').innerHTML = html;
 }
@@ -34,7 +39,7 @@ function mainScreenSuggestedMeal() {
             }
         }
         if (missingIngredients <= 3 && missingIngredients > 0) {
-            html = `<h3>${model.savedMeals[model.userID][i].mealName}</h3>
+            html = `<h3 id="suggestedMealHeader">${model.savedMeals[model.userID][i].mealName}</h3>
             <div>Missing:</div>` + html2;
             obj = {info: html, index: i};
             listOfMeals.push(obj);

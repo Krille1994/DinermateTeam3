@@ -4,8 +4,81 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.content {
-    max-width: 500px;
-    margin: auto;
-    user-select: none;
+#mainContent {
+    position: absolute;
+    left: 30%;
+    top: 250px;
+    font-size: 2em;
+}
+
+#header {
+    position: relative;
+    left: 150px;
+}
+
+#suggestedMeals {
+    border: solid 4px black;
+    height: fit-content;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#suggestedMeals #suggestedMealsButton {
+    height: 120px;
+    width: 600px;
+    margin-top: 10px;
+    font-size: 1.8em;
+    border-radius: 30px;
+    font-weight: 900;
+}
+
+#randomMealButton {
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 0.5em;
+    border-radius: 30px;
+}
+
+#navigateButtons {
+    position: relative;
+    left: 0px;
+    bottom: -10px;
+}
+
+#storageButton {
+    position: relative;
+    bottom: -20px;
+    left: 320px;
+    width: 300px;
+    height: 80px;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+
+
+
+#savedMealsButton {
+    position: relative;
+    bottom: -120px;
+    left: 10px;
+    width: 300px;
+    height: 80px;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+
+#shoppingCartButton {
+    position: relative;
+    bottom: -220px;
+    left: -300px;
+    width: 300px;
+    height: 80px;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+
+#suggestedMealHeader {
+    text-transform: uppercase;
+    margin-top: -0px;
 }
