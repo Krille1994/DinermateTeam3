@@ -418,6 +418,13 @@ const model = {
             recipe: '',
         },
     ],
+    changeStorageItem: '',
+
+    newStorageItem: {
+        item: '',
+        quantity: '',
+        date: '',
+    },
     storage: [
         {
             item: 'Minced Meat',
