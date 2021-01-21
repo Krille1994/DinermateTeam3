@@ -32,21 +32,49 @@ let disableStorageButton = '';
 function leaveAddToStorage() {
     addItemStorageHtml = '';
     storageView();
-}
+};
 
 function saveItemToStorage() {
-    let item = document.getElementById('newStorageItem');
-    let quantity = document.getElementById('newStorageQuantity');
-    let expdate = document.getElementById('newStorageExpDate');
+    // let item = document.getElementById('newStorageItem');
+    // let quantity = document.getElementById('newStorageQuantity');
+    // let expdate = document.getElementById('newStorageExpDate');
 
-    model.storage[model.userID].push({
-        item: item.value,
-        quantity: quantity.value,
-        date: expdate.value,
+    let item = model.newStorageItem.item;
+    let quantity = model.newStorageItem.quantity;
+    let date = model.newStorageItem.date;
+
+    model.storage.push({
+        item: item,
+        quantity: quantity,
+        date: date,
     },);
 
     console.log(model.storage[model.userID]);
 
     addNewItemToStoragePage();
+    resetNewStorageItem();
+};
+
+function changeStorageItem(index) {
+    model.newStorageItem.item = model.storage[index].item;
+    model.newStorageItem.quantity = model.storage[index].quantity;
+    model.newStorageItem.date = model.storage[index].date;
+
+    addNewItemToStoragePage(index);
+};
+
+function saveChangedStorageItem(index) {
+    model.storage[index].item = model.newStorageItem.item;
+    model.storage[index].quantity = model.newStorageItem.quantity;
+    model.storage[index].date = model.newStorageItem.date;
+    addItemStorageHtml = '';
+    resetNewStorageItem();
+    storageView();
+};
+
+function resetNewStorageItem() {
+    model.newStorageItem.item = '';
+    model.newStorageItem.quantity = '';
+    model.newStorageItem.date = '';
 }
 

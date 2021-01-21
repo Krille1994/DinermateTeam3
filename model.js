@@ -493,6 +493,13 @@ const model = {
             },
         ],
     ],
+    changeStorageItem: '',
+
+    newStorageItem: {
+        item: '',
+        quantity: '',
+        date: '',
+    },
     storage: [
         [
             {
