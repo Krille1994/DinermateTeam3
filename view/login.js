@@ -2,6 +2,8 @@
 loginView();
 function loginView(error) {
   document.getElementById('app').innerHTML = ` 
+
+  <div id="loginForm">
     <h1>Sign in</h1>
 
     <form action="/action_page.php">
@@ -13,5 +15,7 @@ function loginView(error) {
     </form>
     <button onclick="checkLogin()">Login</button>
     <button onclick="registerView()">Register</button>
-    `;
+    </div>
+    <div id="footer">Created by: <a href="mailto:team3consulting@example.com">TEAM3 Consulting AS</a></div>
+  `;
 }
