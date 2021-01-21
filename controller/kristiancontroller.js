@@ -20,7 +20,7 @@ function createMealCheckbox(elem, index) {
 }
 
 function saveMeal() {
-    model.savedMeals.push(model.createMeal);
+    model.savedMeals[model.userID].push(model.createMeal);
 
     model.createMeal = {
         mealName: '',
@@ -42,14 +42,14 @@ function saveMeal() {
 function nextSuggestedMeals(value) {
     if (value) {
         model.suggestedMeals.suggestedMealsStart += 4;
-        if (model.suggestedMeals.suggestedMealsStart >= model.savedMeals.length) {
-            model.suggestedMeals.suggestedMealsStart -= model.savedMeals.length;
+        if (model.suggestedMeals.suggestedMealsStart >= model.savedMeals[model.userID].length) {
+            model.suggestedMeals.suggestedMealsStart -= model.savedMeals[model.userID].length;
         }
     }
     else {
         model.suggestedMeals.suggestedMealsStart -= 4;
         if (model.suggestedMeals.suggestedMealsStart < 0) {
-            model.suggestedMeals.suggestedMealsStart += model.savedMeals.length ;
+            model.suggestedMeals.suggestedMealsStart += model.savedMeals[model.userID].length ;
         }
     }
     suggestedMealsView();
@@ -70,16 +70,16 @@ function savedMealsDisplayNewMeals(bool) {
 }
 
 function deleteMeal() {
-    model.savedMeals.splice(model.savedMealsValues.index, 1);
+    model.savedMeals[model.userID].splice(model.savedMealsValues.index, 1);
     model.savedMealsValues.index = false;
     savedMealsView();
 }
 function changeMeal() {
-    model.createMeal = model.savedMeals[model.savedMealsValues.index];
+    model.createMeal = model.savedMeals[model.userID][model.savedMealsValues.index];
     createMealView(true);
 }
 function saveChangedMeal(index) {
-    model.savedMeals[index] = model.createMeal;
+    model.savedMeals[model.userID][index] = model.createMeal;
 
     model.createMeal = {
         mealName: '',

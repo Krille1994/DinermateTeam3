@@ -4,17 +4,17 @@ function savedMealsView() {
         html += '<button onclick="savedMealsDisplayNewMeals(false)">Left</button>';
     }
     for (let i = model.savedMealsValues.loopStart; i < model.savedMealsValues.loopEnd; i++) {
-        if (model.savedMeals[i] == undefined) {
+        if (model.savedMeals[model.userID][i] == undefined) {
 
         }
         else {
             html += `
                 <div onclick="model.savedMealsValues.index = ${i}, savedMealsView()">
-                    <h2>${model.savedMeals[i].mealName}</h2>
+                    <h2>${model.savedMeals[model.userID][i].mealName}</h2>
                     <div>Ingredients:</div>`;
-            for (let j = 0; j< model.savedMeals[i].ingredients.length; j++) {
+            for (let j = 0; j< model.savedMeals[model.userID][i].ingredients.length; j++) {
                 html += `
-                    <div>${model.savedMeals[i].ingredients[j].ingredient}</div>
+                    <div>${model.savedMeals[model.userID][i].ingredients[j].ingredient}</div>
                 `;
             }
             html += `
@@ -22,7 +22,7 @@ function savedMealsView() {
             `;
         }
     }
-    if (model.savedMealsValues.loopEnd < model.savedMeals.length) {
+    if (model.savedMealsValues.loopEnd < model.savedMeals[model.userID].length) {
         html += `
             <button onclick="savedMealsDisplayNewMeals(true)">Right</button>
         `;

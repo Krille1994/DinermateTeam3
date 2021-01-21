@@ -14,7 +14,8 @@ function getRegisteredDetails() {
     return {username: model.registerPage.email,
             password: model.registerPage.password,
             firstname: model.registerPage.firstname,
-            surname: model.registerPage.surname};
+            surname: model.registerPage.surname,
+            ID: model.users.length +1};
 }
 
 function createUser() {
@@ -42,13 +43,13 @@ function saveItemToStorage() {
     let quantity = model.newStorageItem.quantity;
     let date = model.newStorageItem.date;
 
-    model.storage.push({
+    model.storage[model.userID].push({
         item: item,
         quantity: quantity,
         date: date,
     },);
 
-    console.log(model.storage);
+    console.log(model.storage[model.userID]);
 
     addNewItemToStoragePage();
     resetNewStorageItem();
