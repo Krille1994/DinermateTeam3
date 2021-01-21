@@ -25,7 +25,7 @@ const model = {
             surname: 'Nordmann',
         },
     ],
-    userID: '',
+    userID: 0,
     createMeal: {
         mealName: 'Hamburger and fries',
         ingredients: [
@@ -54,7 +54,7 @@ const model = {
     savedMealsValues: {
         index: false,
         loopStart: 0,
-        loopEnd: 4,
+        loopEnd: 8,
     },
     savedMeals: [
         [

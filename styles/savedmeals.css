@@ -3,3 +3,64 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+.topSavedMealsDiv {
+    margin: 11vh 2vw 0 0;
+    float: left;
+    border: 2px solid black;
+    width: 18vw;
+    height: 30vh;
+    overflow: scroll;
+    text-align: center;
+}
+.bottomSavedMealsDiv {
+    margin: 2vh 2vw 0 0;
+    float: left;
+    border: 2px solid black;
+    width: 18vw;
+    height: 30vh;
+    overflow: scroll;
+    text-align: center;
+}
+.firstSavedMealsDiv {
+    margin-left: 10vw;
+}
+#savedMealsBackButton {
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    border-radius: 30px;
+}
+#savedMealsDeleteButton {
+    position: absolute;
+    top: 80vh;
+    left: 36vw;
+    border-radius: 30px;
+    width: 150px;
+    height: 45px;
+}
+#savedMealsChangeButton {
+    position: absolute;
+    top: 80vh;
+    left: 46vw;
+    border-radius: 30px;
+    width: 150px;
+    height: 45px;
+}
+#savedMealsCreateButton {
+    position: absolute;
+    top: 80vh;
+    left: 56vw;
+    border-radius: 30px;
+    width: 150px;
+    height: 45px;
+}
+#savedMealsRightButton {
+    position: absolute;
+    right: 5vw;
+    top: 48vh;
+}
+#savedMealsLeftButton {
+    position: absolute;
+    left: 5vw;
+    top: 48vh;
+}
