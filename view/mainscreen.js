@@ -9,7 +9,7 @@ function mainScreenView() {
             <div id="suggestedMeals">
                 <button id="suggestedMealsButton" onclick="suggestedMealsView()">Suggested Meals</button>
                 <div>${mainScreenSuggestedMeal()}</div>
-                <button id="randomMealButton">Next</button>
+                <button id="randomMealButton" onclick="mainScreenView()">Next</button>
             </div>
             <div id="navigateButtons">
                  <button id="storageButton" onclick="storageView()">Storage</button>
