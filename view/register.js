@@ -2,7 +2,7 @@ const htmlRegisterDiv = document.getElementById('app');
 
 function registerView() {
     htmlRegisterDiv.innerHTML = `
-                        <div>
+                        <div id="registerMain">
                                 <label for="fname">First name:</label></br>
                                 <input type="text" id="fname" name="fname" value=""></br>
                                 <label for="surname">Surname:</label></br>
@@ -13,7 +13,7 @@ function registerView() {
                                 <input type="text" id="email" name="email" value=""></br>
                                 <label for="password">Password:</label></br>
                                 <input type="password" id="password" name="password" value=""></br>
-                                <button onclick="getRegisteredDetails(); createUser();">Register</button>
+                                <button id="registerButton" onclick="getRegisteredDetails(); createUser();">Register</button>
                         </div>
     ` 
 }
