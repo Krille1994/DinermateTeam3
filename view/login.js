@@ -1,5 +1,5 @@
 
-loginView();
+// loginView();
 function loginView(error) {
   document.getElementById('app').innerHTML = ` 
 
