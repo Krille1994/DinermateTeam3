@@ -1,4 +1,4 @@
-mainScreenView();
+
 function mainScreenView() {
     let html = `
         <div id="mainContent">
