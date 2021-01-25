@@ -16,7 +16,21 @@ function mainScreenView() {
                  <button id="shoppingCartButton">Shopping cart</button>
             </div>
         </div>
-    `
+        <div id="shoppingcartPreview">
+            <ul>
+    `;
+    for (let i = 0; i < 5; i++) {
+        if (model.shoppingList[i]) {
+            html += `
+                <li>${model.shoppingList[i].item}</li>
+            `;
+        }
+        else {}
+    }
+    html += `
+        </ul>
+    </div>
+    `;
     document.getElementById('app').innerHTML = html;
 }
 
