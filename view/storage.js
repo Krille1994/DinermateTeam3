@@ -61,7 +61,7 @@ function storageView() {
 }
 
 function deleteStorageItem(index) {
-    model.storage.splice(index, 1);
+    model.storage[model.userID].splice(index, 1);
     console.log(index);
     storageView();
 }
