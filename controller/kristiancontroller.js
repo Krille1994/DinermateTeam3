@@ -101,3 +101,32 @@ function deleteCreateMealIngredient(bool, index) {
 
     createMealView(bool);
 }
+
+function updateShoppingList() {
+    model.shoppingList[model.userID] = [];
+
+    let userMeals = model.savedMeals[model.userID];
+    for (let i = 0; i < userMeals.length; i++) {
+        let ingr = userMeals[i].ingredients;
+        for (let j = 0; j < ingr.length; j++) {
+            if (!updateShoppingListHelp(ingr[j])) {
+                let x = {
+                    item: ingr[j].ingredient,
+                    quantity: '',
+                    date: '',
+                };
+                model.shoppingList[model.userID].push(x);
+            }
+        }
+    }
+}
+
+function updateShoppingListHelp(ingr) {
+    let userStorage = model.storage[model.userID];
+    for (let k = 0; k < userStorage.length; k++) {
+        if (ingr.ingredient === userStorage[k].item) {
+            return true;
+        }
+    }
+    return false;
+}

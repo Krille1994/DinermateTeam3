@@ -13,16 +13,16 @@ function mainScreenView() {
             <div id="navigateButtons">
                  <button id="storageButton" onclick="storageView()">Storage</button>
                  <button id="savedMealsButton" onclick="savedMealsView()">Saved meals</button>
-                 <button id="shoppingCartButton">Shopping cart</button>
+                 <button id="shoppingCartButton" onclick="shoppinglistView()">Shopping cart</button>
             </div>
         </div>
         <div id="shoppingcartPreview">
             <ul>
     `;
     for (let i = 0; i < 5; i++) {
-        if (model.shoppingList[i]) {
+        if (model.shoppingList[model.userID][i]) {
             html += `
-                <li>${model.shoppingList[i].item}</li>
+                <li>${model.shoppingList[model.userID][i].item}</li>
             `;
         }
         else {}

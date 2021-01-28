@@ -80,7 +80,7 @@ const model = {
                         ingredient: 'Random sauce',
                         quantity: '',
                         optional: true,
-                    },   
+                    },
                 ],
                 recipe: '',
             },
@@ -440,7 +440,7 @@ const model = {
                         ingredient: 'Random sauce',
                         quantity: '',
                         optional: true,
-                    },   
+                    },
                 ],
                 recipe: '',
             },
@@ -553,7 +553,7 @@ const model = {
                 date: '2021-02-03',
             },
             {
-                item: 'mustard',
+                item: 'Mustard',
                 quantity: '1',
                 date: '2022-04-22',
             },
@@ -635,7 +635,7 @@ const model = {
                 date: '2021-02-03',
             },
             {
-                item: 'mustard',
+                item: 'Mustard',
                 quantity: '1',
                 date: '2022-04-22',
             },
@@ -672,17 +672,39 @@ const model = {
         ],
     ],
     shoppingList: [
-        {
-            item: 'Mushroom',
-            quantity: '100g',
-        },
-        {
-            item: 'Chicken',
-            quantity: '400g',
-        },
-        {
-            item: 'Garlic',
-            quantity: '2',
-        },
+        [
+            {
+                item: 'Mushroom',
+                quantity: '',
+                date: 'no date',
+            },
+            {
+                item: 'Chicken',
+                quantity: '',
+                date: 'no date',
+            },
+            {
+                item: 'Garlic',
+                quantity: '',
+                date: 'no date',
+            },
+        ],
+        [
+            {
+                item: 'Fish',
+                quantity: '',
+                date: 'no date',
+            },
+            {
+                item: 'Chicken',
+                quantity: '',
+                date: 'no date',
+            },
+            {
+                item: 'Garlic',
+                quantity: '',
+                date: 'no date',
+            },
+        ]
     ],
 }
