@@ -3,6 +3,7 @@ function checkLogin(){
     if(checkLoginHelp() !== false){
         let i= checkLoginHelp();
         model.userID = i;
+        updateShoppingList();
         mainScreenView();
     }
     else {

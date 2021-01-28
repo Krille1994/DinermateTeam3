@@ -195,17 +195,17 @@ function saveItemToStorage() {
 };
 
 function changeStorageItem(index) {
-    model.newStorageItem.item = model.storage[index].item;
-    model.newStorageItem.quantity = model.storage[index].quantity;
-    model.newStorageItem.date = model.storage[index].date;
+    model.newStorageItem.item = model.storage[model.userID][index].item;
+    model.newStorageItem.quantity = model.storage[model.userID][index].quantity;
+    model.newStorageItem.date = model.storage[model.userID][index].date;
 
     addNewItemToStoragePage(index);
 };
 
 function saveChangedStorageItem(index) {
-    model.storage[index].item = model.newStorageItem.item;
-    model.storage[index].quantity = model.newStorageItem.quantity;
-    model.storage[index].date = model.newStorageItem.date;
+    model.storage[model.userID][index].item = model.newStorageItem.item;
+    model.storage[model.userID][index].quantity = model.newStorageItem.quantity;
+    model.storage[model.userID][index].date = model.newStorageItem.date;
     addItemStorageHtml = '';
     resetNewStorageItem();
     storageView();

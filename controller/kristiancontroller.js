@@ -104,20 +104,31 @@ function deleteCreateMealIngredient(bool, index) {
 
 function updateShoppingList() {
     model.shoppingList[model.userID] = [];
+    let tempList = [];
 
     let userMeals = model.savedMeals[model.userID];
     for (let i = 0; i < userMeals.length; i++) {
         let ingr = userMeals[i].ingredients;
         for (let j = 0; j < ingr.length; j++) {
             if (!updateShoppingListHelp(ingr[j])) {
-                let x = {
-                    item: ingr[j].ingredient,
-                    quantity: '',
-                    date: '',
-                };
-                model.shoppingList[model.userID].push(x);
+                if (tempList.length == 0) {
+                    tempList.push(ingr[j].ingredient);
+                }
+                else {
+                    if(!updateShoppingListHelp2(tempList, ingr, j)) {
+                        tempList.push(ingr[j].ingredient);
+                    }
+                }
             }
         }
+    }
+    for (let a = 0; a < tempList.length; a++) {
+        let x = {
+            item: tempList[a],
+            quantity: '',
+            date: '',
+        };
+        model.shoppingList[model.userID].push(x);
     }
 }
 
@@ -130,3 +141,11 @@ function updateShoppingListHelp(ingr) {
     }
     return false;
 }
+function updateShoppingListHelp2(tempList, ingr, j) {
+    for (let f in tempList) {
+        if (!tempList[f].includes(ingr[j].ingredient)) {
+        }
+    }
+}
+
+
