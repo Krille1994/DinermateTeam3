@@ -61,3 +61,35 @@
     top: 50px;
     left: 50px;
 }
+
+.storageItem {
+    position: relative;
+    left: 140px;
+    top: -45px;
+    width: 250px;
+    height: 40px;
+    font-size: 1em;
+}
+
+.storageItems {
+    height: 200px;
+}
+
+.storageDeleteItem {
+    position: relative;
+    left: 25px;
+}
+
+.storageDeleteItem:hover {
+    background: gray;
+}
+
+.storageChangeItem {
+    position: relative;
+    top: -35px;
+    left: 150px;
+}
+
+.storageChangeItem:hover {
+    background: gray;
+}

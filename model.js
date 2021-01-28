@@ -25,7 +25,7 @@ const model = {
             surname: 'Nordmann',
         },
     ],
-    userID: '',
+    userID: 0,
     createMeal: {
         mealName: 'Hamburger and fries',
         ingredients: [

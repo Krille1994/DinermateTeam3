@@ -21,6 +21,7 @@ input {
     height: 50px;
     font-size: 1.5em;
     text-align: center;
+    background: white;
 }
 
 #registerButton {
@@ -39,20 +40,21 @@ input {
     #registerMain {
         position: relative;
         top: 250px;
-        left: 10px;
+        left: 0px;
     }
     
     label {
         font-size: 1.5em;
         position: relative;
-        left: 110px;
+        left: 85px;
     }
     
     input {
-        width: 250px;
+        width: 200px;
         height: 30px;
         font-size: 2em;
         text-align: center;
+        background: white;
     }
     
     #registerButton {
@@ -60,7 +62,7 @@ input {
         height: 50px;
         position: relative;
         top: 25px;
-        left: 25px;
+        left: 3px;
         font-size: 2em;
     }
 

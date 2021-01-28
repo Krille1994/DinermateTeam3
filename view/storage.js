@@ -37,10 +37,10 @@ function storageView() {
     // Loops through all items in model.storage and creates a div for each.
     for (let i = 0; i < storageItems.length; i++) {
         storageHtml += `<div id="storageTest">
-                            <div id="storageItemsDiv${i}" onclick="selectStorageItem(this)">
+                            <div id="storageItemsDiv${i}" class="storageItems" onclick="selectStorageItem(this)">
                                  <p>Item:</p> <input type="text" class="storageItem" value="${storageItems[i].item}">
-                                 <p>Quantity:</p> <input type="text" class="quantityItem" value="${storageItems[i].quantity}">
-                                 <p>Expiration date:</p> <input type="date" class="storageExpDate" value="${storageItems[i].date}">
+                                 <p>Quantity:</p> <input type="text" class="storageItem" value="${storageItems[i].quantity}">
+                                 <p>Expiration date:</p> <input type="date" class="storageItem" value="${storageItems[i].date}">
                                  <button ${disableStorageButton} class="storageDeleteItem" onclick="deleteStorageItem(${i})">Delete item</button>
                                  <button ${disableStorageButton} class="storageChangeItem" onclick="changeStorageItem(${i})">Change item</button>
                             </div>
