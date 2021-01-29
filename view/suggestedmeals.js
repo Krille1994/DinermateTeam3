@@ -116,3 +116,75 @@ function threeMissingIngredients() {
         return false;
     }
 }
+
+
+
+
+
+
+function suggestedMealsView2() {
+    let start = model.suggestedMeals.suggestedMealsStart;
+    let sugMeals = model.suggestedMeals.suggestedMeals;
+    let sugIngr = model.suggestedMeals.missingIngredients;
+    let meals = model.savedMeals[model.userID];
+    let html = `
+    <button onclick="mainScreenView()">Go Back</button>
+    <h1 id="suggestedMealsHeader">Suggested Meals:</h1>
+    ${start == 0 ? '' : '<button id="suggestedMealsLeft" onclick="nextSuggestedMeals(false)">Left</button>'}
+    `;
+
+    for (let i = 0; i < meals.length + 4; i++) {
+        if (sugMeals.length == 4) {
+            break;
+        }
+        if (meals[i] == undefined) {
+            sugMeals.push(false);
+            sugIngr.push(false);
+        }
+        else {
+            let missingIngr = suggestedMealsCheckIngredients(i);
+            if (missingIngr.length == 0) {
+                sugMeals.push(meals[userID][i].mealName);
+                sugIngr.push(true);
+            }
+            else {
+                let misNumber = 0
+                for (let j = 0; j < missingIngr.length; j++) {
+                    if (missingIngr[j].optional === false) {
+                        misNumber++;
+                    }
+                }
+                if (misNumber <= 3) {
+                    sugMeals.push(meals[userID][i].mealName);
+                    sugIngr.push(missingIngr);
+                }
+            }
+        }
+    }
+    // if siste måltid er tomt ingen right button
+
+    // sorter måltidene etter om de er optional
+
+    // vis fram måltidene.
+}
+
+// function suggestedMealsCheckIngredients(index) {
+//     let x = [];
+//     let meal = model.savedMeals[model.userID][index];
+//     for (let i = 0; i < meal.ingredients.length; i++) {
+//         for (let j = 0; j < model.storage.length; j++) {
+//             if (meal.ingredients[i].ingredient == model.storage[j].item) {
+//                 let obj = {ingredient: meal.ingredients[i].ingredient, optional: meal.ingredients[i].optional};
+//                 x.push(obj);
+//             }
+//         }
+//     }
+//     return x;
+// }
+
+// function suggestedMealsCreateHtml(sugMeals, sugIngr) {
+//     let html;
+//     for (let i = 0; i < sugMeals.length; i++) {
+
+//     }
+// }

@@ -17,6 +17,7 @@ function shoppinglistView() {
                     <td></td>
                     <td>Quantity:</td>
                     <td>Date:</td>
+                    <td>Remove</td>
                     <td></td>
                 </tr>
         `;
@@ -28,6 +29,7 @@ function shoppinglistView() {
                     <td><input type="text" onchange="model.shoppingList[model.userID][${i}].quantity = this.value"></td>
                     <td><input type="date" onchange="model.shoppingList[model.userID][${i}].date = this.value"></td>
                     <td><button onclick="removeShoppinglistItem(${i})">X</button></td>
+                    <td><button onclick="permanentlyBanItem(${i})">Permanently remove</button></td>
                 </tr>
             `;
         }

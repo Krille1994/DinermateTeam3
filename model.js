@@ -49,6 +49,7 @@ const model = {
     },
     suggestedMeals: {
         suggestedMealsStart: 0,
+        suggestedMeals: [],
         missingIngredients: [],
     },
     savedMealsValues: {
@@ -705,6 +706,14 @@ const model = {
                 quantity: '',
                 date: 'no date',
             },
-        ]
+        ],
+    ],
+    shoppingListPermaBan: [
+        [
+
+        ],
+        [
+
+        ],
     ],
 }

@@ -56,3 +56,11 @@ function sendToStorage() {
     }
     shoppinglistView();
 }
+
+function permanentlyBanItem(index) {
+    if (confirm('Press OK to permanently remove item from shoppinglist')) {
+        model.shoppingListPermaBan[model.userID].push(model.shoppingList[model.userID][index].item);
+        updateShoppingList();
+        shoppinglistView();
+    }
+}

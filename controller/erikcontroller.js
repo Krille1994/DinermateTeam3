@@ -159,6 +159,8 @@ function createUser() {
     ];
     model.savedMeals.push(x);
     model.storage.push([]);
+    model.shoppingList.push([]);
+    model.shoppingListPermaBan.push([]);
 
     loginView();
 } 
@@ -190,8 +192,8 @@ function saveItemToStorage() {
 
     console.log(model.storage[model.userID]);
 
-    addNewItemToStoragePage();
     resetNewStorageItem();
+    addNewItemToStoragePage();
 };
 
 function changeStorageItem(index) {
@@ -216,4 +218,5 @@ function resetNewStorageItem() {
     model.newStorageItem.quantity = '';
     model.newStorageItem.date = '';
 }
+
 

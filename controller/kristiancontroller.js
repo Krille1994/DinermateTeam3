@@ -111,11 +111,21 @@ function updateShoppingList() {
         let ingr = userMeals[i].ingredients;
         for (let j = 0; j < ingr.length; j++) {
             if (!updateShoppingListHelp(ingr[j])) {
-                if (tempList.length == 0) {
-                    tempList.push(ingr[j].ingredient);
+                if (model.shoppingListPermaBan[model.userID].length !== 0) {
+                    if (!checkPermabannedItems(ingr[j])) {
+                        if (tempList.length == 0) {
+                            tempList.push(ingr[j].ingredient);
+                        }
+                        else if(!updateShoppingListHelp2(tempList, ingr, j)) {
+                            tempList.push(ingr[j].ingredient);
+                        }
+                    }
                 }
                 else {
-                    if(!updateShoppingListHelp2(tempList, ingr, j)) {
+                    if (tempList.length == 0) {
+                        tempList.push(ingr[j].ingredient);
+                    }
+                    else if(!updateShoppingListHelp2(tempList, ingr, j)) {
                         tempList.push(ingr[j].ingredient);
                     }
                 }
@@ -146,6 +156,16 @@ function updateShoppingListHelp2(tempList, ingr, j) {
         if (!tempList[f].includes(ingr[j].ingredient)) {
         }
     }
+}
+
+function checkPermabannedItems(ingr) {
+    let perm = model.shoppingListPermaBan[model.userID];
+    for (let i = 0; i < perm.length; i++) {
+        if (perm[i] == ingr.ingredient) {
+            return true;
+        }
+    }
+        return false;
 }
 
 
