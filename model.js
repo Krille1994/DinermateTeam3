@@ -155,6 +155,11 @@ const model = {
                         ingredient: 'Sour Cream',
                         quantity: '',
                         optional: false,
+                    },
+                    {
+                        ingredient: 'fish',
+                        quantity: '',
+                        optional: true,
                     }
                 ],
                 recipe: '',
