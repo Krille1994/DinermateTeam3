@@ -1,3 +1,8 @@
+// localstorage variabler
+// let modelSerialized;
+// let modelDeserialized;
+
+// model
 const model = {
     login: {
         user: '',

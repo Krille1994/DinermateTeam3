@@ -169,3 +169,39 @@ function checkPermabannedItems(ingr) {
 }
 
 
+// local Storage funksjoner
+
+function saveToLocalStorage() {
+    let usersSerialized = JSON.stringify(model.users);
+    let savedMealsSerialized = JSON.stringify(model.savedMeals);
+    let storageSerialized = JSON.stringify(model.storage);
+    let shoppingListSerialized = JSON.stringify(model.shoppingList);
+    let shoppingListPermaBanSerialized = JSON.stringify(model.shoppingListPermaBan);
+
+    localStorage.setItem("users", usersSerialized);
+    localStorage.setItem("savedMeals", savedMealsSerialized);
+    localStorage.setItem("storage", storageSerialized);
+    localStorage.setItem("shoppingList", shoppingListSerialized);
+    localStorage.setItem("shoppingListPermaBan", shoppingListPermaBanSerialized);
+}
+function getFromLocalStorage() {
+    usersDeserialized = JSON.parse(localStorage.getItem("users"));
+    savedMealsDeserialized = JSON.parse(localStorage.getItem("savedMeals"));
+    storageDeserialized = JSON.parse(localStorage.getItem("storage"));
+    shoppingListDeserialized = JSON.parse(localStorage.getItem("shoppingList"));
+    shoppingListPermaBanDeserialized = JSON.parse(localStorage.getItem("shoppingListPermaBan"));
+
+    model.users = usersDeserialized;
+    model.savedMeals = savedMealsDeserialized;
+    model.storage = storageDeserialized;
+    model.shoppingList = shoppingListDeserialized;
+    model.shoppingListPermaBan = shoppingListPermaBanDeserialized;
+}
+
+window.onbeforeunload = function() {
+    saveToLocalStorage();
+    return 'Are you shure you want to leave?';
+}
+window.onload = function() {
+    getFromLocalStorage();
+}
