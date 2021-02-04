@@ -5,6 +5,7 @@ function checkLogin(){
         model.userID = i;
         updateShoppingList();
         mainScreenView();
+        // Funk for faen!
     }
     else {
         loginView(true);
