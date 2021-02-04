@@ -9,7 +9,7 @@ const model = {
         email: 'ola.nordmann@mail.no',
         password: '*******',
     },
-    users:[
+    users: [
         {
             ID: 0,
             username: 'ola.nordmann@mail.no',
