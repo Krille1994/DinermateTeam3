@@ -185,17 +185,19 @@ function saveToLocalStorage() {
     localStorage.setItem("shoppingListPermaBan", shoppingListPermaBanSerialized);
 }
 function getFromLocalStorage() {
-    usersDeserialized = JSON.parse(localStorage.getItem("users"));
-    savedMealsDeserialized = JSON.parse(localStorage.getItem("savedMeals"));
-    storageDeserialized = JSON.parse(localStorage.getItem("storage"));
-    shoppingListDeserialized = JSON.parse(localStorage.getItem("shoppingList"));
-    shoppingListPermaBanDeserialized = JSON.parse(localStorage.getItem("shoppingListPermaBan"));
+    if (localStorage.getItem("users") !== null) {
+        usersDeserialized = JSON.parse(localStorage.getItem("users"));
+        savedMealsDeserialized = JSON.parse(localStorage.getItem("savedMeals"));
+        storageDeserialized = JSON.parse(localStorage.getItem("storage"));
+        shoppingListDeserialized = JSON.parse(localStorage.getItem("shoppingList"));
+        shoppingListPermaBanDeserialized = JSON.parse(localStorage.getItem("shoppingListPermaBan"));
 
-    model.users = usersDeserialized;
-    model.savedMeals = savedMealsDeserialized;
-    model.storage = storageDeserialized;
-    model.shoppingList = shoppingListDeserialized;
-    model.shoppingListPermaBan = shoppingListPermaBanDeserialized;
+        model.users = usersDeserialized;
+        model.savedMeals = savedMealsDeserialized;
+        model.storage = storageDeserialized;
+        model.shoppingList = shoppingListDeserialized;
+        model.shoppingListPermaBan = shoppingListPermaBanDeserialized;
+    }
 }
 
 window.onbeforeunload = function() {
