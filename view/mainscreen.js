@@ -17,6 +17,7 @@ function mainScreenView() {
             </div>
         </div>
         <div id="shoppingcartPreview">
+            <h4>Shopping Cart Preview</h4>
             <ul>
     `;
     for (let i = 0; i < 5; i++) {
