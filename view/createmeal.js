@@ -1,9 +1,9 @@
 function createMealView(mealChange) {
     let html = `
-        <div id="createMealTable" style="float: left;">
+        <div id="createMealTable">
             <h1>${mealChange ? 'Change Meal' : 'Create a meal'}</h1>
 
-            <table style="width: 60%">
+            <table id="createMealTable">
                 <tr>
                     <td></td>
                     <td></td>
@@ -52,7 +52,7 @@ function createMealView(mealChange) {
     
     <div id="createRecipeDiv" style="float: right; width: 40%; height: 90%;">
         <h1>Recipe:</h1>
-        <input type="text" style="width: 100%; height: 100%;" value="${model.createMeal.recipe}" onchange="model.createMeal.recipe = this.value">
+        <textarea type="text" style="width: 80%;" rows ="30" value="${model.createMeal.recipe}" onchange="model.createMeal.recipe = this.value"></textarea>
     </div>
     `;
     document.getElementById('app').innerHTML = html;
