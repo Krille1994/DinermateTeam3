@@ -8,12 +8,12 @@
     position: absolute;
     left: 30%;
     top: 0px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 #header {
     position: relative;
-    left: 150px;
+    left: 220px;
 }
 
 #suggestedMeals {
@@ -81,4 +81,27 @@
 #suggestedMealHeader {
     text-transform: uppercase;
     margin-top: -0px;
+}
+
+#shoppingcartPreview {
+    border: solid 4px black;
+    width: 350px;
+    height: 370px;
+    position: relative;
+    left: 150px;
+    top: 130px;
+    text-align: center;
+    overflow: scroll;
+}
+
+#shoppingcartPreview h4 {
+    text-decoration: underline;
+    position: relative;
+}
+
+#shoppingcartPreview ul {
+    list-style-type: square;
+    position: relative;
+    left: 0px;
+
 }
