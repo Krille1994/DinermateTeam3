@@ -200,7 +200,6 @@ function getFromLocalStorage() {
 
 window.onbeforeunload = function() {
     saveToLocalStorage();
-    return 'Are you shure you want to leave?';
 }
 window.onload = function() {
     getFromLocalStorage();

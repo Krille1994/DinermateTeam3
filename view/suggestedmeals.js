@@ -1,20 +1,13 @@
 
-
-
-
-
-
 function suggestedMealsView() {
     let start = model.suggestedMeals.suggestedMealsStart;
-    let sugMeals = model.suggestedMeals.suggestedMeals;
-    let sugIngr = model.suggestedMeals.missingIngredients;
-    sugMeals = [];
-    sugIngr = [];
+    let sugMeals = []; // la stå
+    let sugIngr = [];  // la stå
     let meals = model.savedMeals[model.userID];
     let html = `
     <button onclick="mainScreenView()">Go Back</button>
     <h1 id="suggestedMealsHeader">Suggested Meals:</h1>
-    ${start == 0 ? '' : '<button id="suggestedMealsLeft" onclick="nextSuggestedMeals(false)">Left</button>'}
+    ${start === 0 ? '' : '<button id="suggestedMealsLeft" onclick="nextSuggestedMeals(false)">Left</button>'}
     `;
 
     for (let i = 0; i < meals.length + 4; i++) {
@@ -64,18 +57,18 @@ function suggestedMealsCheckIngredients(index) {
     }
     return x;
 }
-function suggestedMealsCheckIngredientsHelp(meal, index) {
+function suggestedMealsCheckIngredientsHelp(meal, index) { 
     for (let i = 0; i < model.storage[model.userID].length; i++) {
         if (meal.ingredients[index].ingredient == model.storage[model.userID][i].item) {
             return true;
-        } 
+        }
     }
     return false;
 }
 
 function suggestedMealsCreateHtml(sugMeals, sugIngr) {
     let start = model.suggestedMeals.suggestedMealsStart;
-    let html;
+    let html = '';
     let number = 0;
     for (let i = start; i < start+4; i++) {
         number++
