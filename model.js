@@ -27,23 +27,14 @@ const model = {
     ],
     userID: 0,
     createMeal: {
-        mealName: 'Hamburger and fries',
+        mealName: '',
         ingredients: [
             {
-                ingredient: 'Minced Meat',
-                quantity: '400g',
+                ingredient: '',
+                quantity: '',
                 optional: false,
             },
-            {
-                ingredient: 'Fries',
-                quantity: '180g',
-                optional: false,
-            },
-            {
-                ingredient: 'Tomato',
-                quantity: '1',
-                optional: true,
-            },
+            
         ],
         recipe: '',
     },

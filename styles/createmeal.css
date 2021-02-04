@@ -4,3 +4,9 @@
     font-family: 'Poppins', sans-serif;
     
 }
+#createMealTable {
+    float: left;
+}
+#createMealTable {
+    width: 60%;
+}

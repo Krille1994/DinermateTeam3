@@ -47,7 +47,9 @@ function mainScreenSuggestedMeal() {
                 missingIngredients++;
                 html2 += `<div style="color: red;">${model.savedMeals[model.userID][i].ingredients[o].ingredient}</div>`;
             }
-            else if (!mainScreenSuggestedMealHelp(i, o) && model.savedMeals[model.userID][i].ingredients[o].optional) {
+        }
+        for (let o = 0; o < model.savedMeals[model.userID][i].ingredients.length; o++) {
+            if (!mainScreenSuggestedMealHelp(i, o) && model.savedMeals[model.userID][i].ingredients[o].optional) {
                 html2 += `<div style="color: orange;">${model.savedMeals[model.userID][i].ingredients[o].ingredient}</div>`;
             }
         }
