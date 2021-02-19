@@ -5,6 +5,45 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#storageMainDiv button {
+    background-color: lightgray;
+}
+
+#storageMainDiv button:hover {
+    background-color: gray;
+}
+
+#storageAddNewItem {
+    position: relative;
+    top: 130px;
+    left: 60px;
+    width: 200px;
+    height: 100px;
+    font-size: 1.5em;
+}
+
+#exitAddToStorage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#addItemToStorage {
+    font-size: 0.5em;
+    position: relative;
+    width: 500px;
+}
+
+#addItemToStorage label {
+    position: inherit;
+    left: -0px;
+}
+
+#saveToStorageButton {
+    position: inherit;
+    top: 20px;
+}
+
 #storageMainDiv {
     border: solid 1px black;
     height: 1000px;
@@ -15,7 +54,7 @@
     border: solid 1px black;
     height: 970px;
     overflow: auto;
-    width: 550px;
+    width: 600px;
     margin: 10px;
 }
 
@@ -34,21 +73,21 @@
 
 #addNewItem {
     border: solid 1px black;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     padding: 30px;
     padding-bottom: 50px;
     position: relative;
-    top: -600px;
-    width: 300px;
-    left: 900px;
+    top: -700px;
+    width: 500px;
+    left: 800px;
 }
 
-#exitAddToStorage {
-    position: relative;
-    top: -40px;
-    left: 200px;
+#addNewItem label {
+    text-align: left;
 }
+
+
 
 #storageDeleteItem {
     position: relative;
@@ -66,18 +105,19 @@
     position: relative;
     left: 140px;
     top: -45px;
-    width: 250px;
+    width: 200px;
     height: 40px;
     font-size: 1em;
 }
 
 .storageItems {
     height: 200px;
+    width: 450px;
 }
 
 .storageDeleteItem {
     position: relative;
-    left: 25px;
+    left: -70px;
 }
 
 .storageDeleteItem:hover {
@@ -86,10 +126,19 @@
 
 .storageChangeItem {
     position: relative;
-    top: -35px;
-    left: 150px;
+    top: 0px;
+    left: -65px;
 }
 
 .storageChangeItem:hover {
     background: gray;
 }
+
+@media only screen and (max-width: 600px) {
+   
+    #storageContent {
+        width: 300px;
+    }
+
+}
+
