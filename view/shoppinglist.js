@@ -29,7 +29,7 @@ function shoppinglistView() {
                     <td><input type="text" onchange="model.shoppingList[model.userID][${i}].quantity = this.value"></td>
                     <td><input type="date" onchange="model.shoppingList[model.userID][${i}].date = this.value"></td>
                     <td><button onclick="removeShoppinglistItem(${i})">X</button></td>
-                    <td><button onclick="permanentlyBanItem(${i})">Permanently remove</button></td>
+                    <td><button id="permanentlyRemoveButton" onclick="permanentlyBanItem(${i})">Permanently remove</button></td>
                 </tr>
             `;
         }

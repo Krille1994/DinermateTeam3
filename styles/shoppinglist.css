@@ -4,3 +4,14 @@
     font-family: 'Poppins', sans-serif;
     
 }
+@media only screen and (max-width: 600px) {
+    input {
+        width: 20vw;
+    }
+    #permanentlyRemoveButton {
+        font-size: 1em;
+    }
+    table {
+        margin-left: -25px;
+    }
+}
