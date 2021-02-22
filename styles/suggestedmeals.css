@@ -50,3 +50,36 @@
 .sugMealIngredients {
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    #suggestedMealsHeader {
+        font-size: 5em;
+        width: 80vw;
+        text-align: center;
+    }
+    #suggestedMealsLeft {
+        top: 82vh;
+        left: 20vw;
+        width: 50px;
+    }
+    #suggestedMealsRight {
+        top: 82vh;
+        left: 48vw;
+        width: 50px;
+    }
+    #suggestedMealDiv1 {
+        left: 0;
+    }
+    #suggestedMealDiv3 {
+        left: 0;
+    }
+    #suggestedMealDiv2 {
+        left: 43vw;
+    }
+    #suggestedMealDiv4 {
+        left: 43vw;
+    }
+    .suggestedMealDivs {
+        width: 37vw;
+    }
+}

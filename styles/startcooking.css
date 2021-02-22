@@ -4,3 +4,24 @@
     
     font-family: 'Poppins', sans-serif;
 }
+#startCookingHeader {
+    display: flex;
+    justify-content: center;
+}
+#startCookingIngredients {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+}
+#startCookingRecipe {
+    position: absolute;
+    left: 70vw;
+    top: 10vh;
+}
+#startCookingRecipeText {
+    position: absolute;
+    left: 55vw;
+    top: 20vh;
+    width: 40vw;
+    height: 60vh;
+}

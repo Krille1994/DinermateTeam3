@@ -88,7 +88,7 @@
     width: 350px;
     height: 370px;
     position: relative;
-    left: 150px;
+    left: 7.8vw;
     top: 130px;
     text-align: center;
     overflow: scroll;
@@ -104,4 +104,89 @@
     position: relative;
     left: 0px;
 
+}
+
+@media only screen and (max-width: 1650px) {
+    #shoppingcartPreview {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1322px) {
+    #mainContent {
+        left: 20vw;
+    }
+    #header {
+        left: 0;
+        width: 60vw;
+        text-align: center;
+    }
+    #suggestedMeals {
+        width: 60vw;
+        margin-right: 10vw;
+    }
+    #navigateButtons {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #storageButton {
+        left: 0;
+        bottom: 0;
+    }
+    #savedMealsButton {
+        left: 0;
+        bottom: 0;
+
+    }
+    #shoppingCartButton {
+        left: 0;
+        bottom: 0;
+    }
+    #suggestedMeals #suggestedMealsButton {
+        height: 100px;
+        width: 100%;
+        margin-top: 1px;
+        font-size: 1.8em;
+        border-radius: 30px;
+        font-weight: 900;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #mainContent {
+        left: 0;
+    }
+    #header {
+        left: 0;
+        width: 80vw;
+        text-align: center;
+    }
+    #suggestedMeals {
+        width: 300px;
+        margin-right: 10vw;
+    }
+    #navigateButtons {
+        width: 82vw;
+        display: flex;
+        align-items: center;
+    }
+    #storageButton {
+        bottom: 0;
+    }
+    #savedMealsButton {
+        bottom: -10px;
+    }
+    #shoppingCartButton {
+        bottom: -20px;
+    }
+    #suggestedMeals #suggestedMealsButton {
+        height: 40px;
+        width: 60%;
+        margin-top: 1px;
+        font-size: 1.8em;
+        border-radius: 30px;
+        font-weight: 900;
+    }
 }
