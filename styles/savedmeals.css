@@ -13,6 +13,9 @@
     overflow: scroll;
     text-align: center;
 }
+.topSavedMealsDiv::-webkit-scrollbar {
+    display: none;
+}
 .bottomSavedMealsDiv {
     margin: 2vh 2vw 0 0;
     float: left;
@@ -21,6 +24,9 @@
     height: 30vh;
     overflow: scroll;
     text-align: center;
+}
+.bottomSavedMealsDiv::-webkit-scrollbar {
+    display: none;
 }
 .firstSavedMealsDiv {
     margin-left: 10vw;

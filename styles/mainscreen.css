@@ -93,6 +93,10 @@
     text-align: center;
     overflow: scroll;
 }
+#shoppingcartPreview::-webkit-scrollbar {
+    display: none;
+}
+
 
 #shoppingcartPreview h4 {
     text-decoration: underline;

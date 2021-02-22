@@ -55,6 +55,9 @@
     width: 600px;
     margin: 10px;
 }
+#storageContent::-webkit-scrollbar {
+    display: none
+}
 
 #storageTest {
     border: solid 1px black;
