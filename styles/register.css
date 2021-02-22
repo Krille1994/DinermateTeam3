@@ -17,13 +17,17 @@ label {
     left: 80px;
 }
 
-input {
+#registerMain input {
     width: 300px;
     height: 50px;
     font-size: 1.5em;
     text-align: center;
     background: white;
 }
+
+
+
+
 
 #registerButton {
     width: 200px;
