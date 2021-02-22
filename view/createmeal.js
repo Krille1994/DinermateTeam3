@@ -27,7 +27,7 @@ function createMealView(mealChange) {
                             <input class="createMealInputs" type="text" value="${ingredients[i].ingredient}" onchange="model.createMeal.ingredients[${i}].ingredient = this.value">
                         </td>
                         <td>
-                            <input class="createMealInputs" type="text" value="${ingredients[i].quantity}" onchange="model.createMeal.ingredients[${i}].quantity = this.value">
+                            <input class="createMealInputs createMealQuantityInputs" type="text" value="${ingredients[i].quantity}" onchange="model.createMeal.ingredients[${i}].quantity = this.value">
                         </td>
                         <td class="createMealCheckboxTD">
                             <input id="createMealOptionalCheck${i}" class="createMealCheckboxes" type="checkbox" ${ingredients[i].optional ? 'checked' : ''} onclick="createMealCheckbox(this, ${i})">

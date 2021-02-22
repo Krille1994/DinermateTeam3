@@ -5,13 +5,13 @@
     
 }
 @media only screen and (max-width: 600px) {
-    input {
+    #shoppingListTable tr td input {
         width: 20vw;
     }
     #permanentlyRemoveButton {
         font-size: 1em;
     }
-    table {
+    #shoppingListTable {
         margin-left: -25px;
     }
 }

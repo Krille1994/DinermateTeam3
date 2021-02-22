@@ -12,7 +12,7 @@ function shoppinglistView() {
     }
     else {
         html += `
-            <table style="width: 50%;">
+            <table id="shoppingListTable" style="width: 50%;">
                 <tr>
                     <td></td>
                     <td>Quantity:</td>
