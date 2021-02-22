@@ -16,7 +16,7 @@ function addNewItemToStoragePage(index) {
             <input type="text" id="newStorageQuantity" value="${model.newStorageItem.quantity}" onchange="model.newStorageItem.quantity = this.value"></br>
             <label for="expdate">Expiration date:</label></br>
             <input type="date" id="newStorageExpDate" value="${model.newStorageItem.date}" onchange="model.newStorageItem.date = this.value"></br>
-            <button onclick="${index >= 0 ? 'saveChangedStorageItem('+ index + ')' : 'saveItemToStorage()'};">${index >= 0 ? 'Save changed item' : 'Save to storage'}</button>
+            <button id="saveToStorageButton" onclick="${index >= 0 ? 'saveChangedStorageItem('+ index + ')' : 'saveItemToStorage()'};">${index >= 0 ? 'Save changed item' : 'Save to storage'}</button>
         </div>
     </div>
     `;
