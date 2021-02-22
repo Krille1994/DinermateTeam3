@@ -41,17 +41,17 @@ input {
     #registerMain {
         position: relative;
         top: 250px;
-        left: 55px;
+        left: 40vw;
     }
     
-    label {
-        font-size: 1.5em;
+    #registerMain label {
+        font-size: 2em;
         position: relative;
         left: 85px;
     }
     
-    input {
-        width: 200px;
+    #registerMain input {
+        width: 60vw;
         height: 30px;
         font-size: 2em;
         text-align: center;
@@ -63,7 +63,7 @@ input {
         height: 50px;
         position: relative;
         top: 25px;
-        left: 3px;
+        left: 17px;
         font-size: 2em;
     }
 
