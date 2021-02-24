@@ -74,9 +74,7 @@ const model = {
                         optional: true,
                     },
                 ],
-                recipe: `
-                        1. 
-                        `,
+                recipe: ``,
             },
             {
                 mealName: 'temporary1',
