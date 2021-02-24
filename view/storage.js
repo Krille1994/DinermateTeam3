@@ -11,11 +11,11 @@ function addNewItemToStoragePage(index) {
         <div id="addItemToStorage">
             <button id="exitAddToStorage" onclick="leaveAddToStorage()">X</button>
             <label for="item">Item:</label></br>
-            <input type="text" id="newStorageItem" value="${model.newStorageItem.item}" onchange="model.newStorageItem.item = this.value"></br>
+            <input type="text" class="inputField" id="newStorageItem" value="${model.newStorageItem.item}" onchange="model.newStorageItem.item = this.value"></br>
             <label for="quantity">Quantity:</label></br>
-            <input type="text" id="newStorageQuantity" value="${model.newStorageItem.quantity}" onchange="model.newStorageItem.quantity = this.value"></br>
+            <input type="text" class="inputField" id="newStorageQuantity" value="${model.newStorageItem.quantity}" onchange="model.newStorageItem.quantity = this.value"></br>
             <label for="expdate">Expiration date:</label></br>
-            <input type="date" id="newStorageExpDate" value="${model.newStorageItem.date}" onchange="model.newStorageItem.date = this.value"></br>
+            <input type="date" class="inputField" id="newStorageExpDate" value="${model.newStorageItem.date}" onchange="model.newStorageItem.date = this.value"></br>
             <button id="saveToStorageButton" onclick="${index >= 0 ? 'saveChangedStorageItem('+ index + ')' : 'saveItemToStorage()'};">${index >= 0 ? 'Save changed item' : 'Save to storage'}</button>
         </div>
     </div>
@@ -38,9 +38,9 @@ function storageView() {
     for (let i = 0; i < storageItems.length; i++) {
         storageHtml += `<div id="storageTest">
                             <div id="storageItemsDiv${i}" class="storageItems" onclick="selectStorageItem(this)">
-                                 <p>Item:</p> <input type="text" class="storageItem" value="${storageItems[i].item}">
-                                 <p>Quantity:</p> <input type="text" class="storageItem" value="${storageItems[i].quantity}">
-                                 <p>Expiration date:</p> <input type="date" class="storageItem" value="${storageItems[i].date}">
+                                 <p>Item:</p> <input type="text" class="storageItem inputField" value="${storageItems[i].item}">
+                                 <p>Quantity:</p> <input type="text" class="storageItem inputField"" value="${storageItems[i].quantity}">
+                                 <p>Expiration date:</p> <input type="date" class="storageItem inputField"" value="${storageItems[i].date}">
                                  <button ${disableStorageButton} class="storageDeleteItem" onclick="deleteStorageItem(${i})">Delete item</button>
                                  <button ${disableStorageButton} class="storageChangeItem" onclick="changeStorageItem(${i})">Change item</button>
                             </div>
