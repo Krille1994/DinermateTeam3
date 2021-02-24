@@ -160,7 +160,7 @@
 
 @media only screen and (max-width: 600px) {
     #mainContent {
-        left: 0;
+        left: 0px;
     }
     #header {
         left: 0;
