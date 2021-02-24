@@ -11,27 +11,11 @@ function mainScreenView() {
                 <button id="randomMealButton" class="buttonHover" onclick="mainScreenView()">Next</button>
             </div>
             <div id="navigateButtons">
-                 <button id="storageButton" class="buttonHover" onclick="storageView()">Storage</button>
-                 <button id="savedMealsButton" class="buttonHover" onclick="savedMealsView()">Saved meals</button>
-                 <button id="shoppingCartButton" class="buttonHover" onclick="shoppinglistView()">Shopping cart</button>
+                 <button id="storageButton" class="buttonHover" onclick="storageView()">Storage</button></br>
+                 <button id="savedMealsButton" class="buttonHover" onclick="savedMealsView()">Saved meals</button></br>
+                 <button id="shoppingCartButton" class="buttonHover" onclick="shoppinglistView()">Shopping cart</button></br>
             </div>
-        </div>
-        <div id="shoppingcartPreview">
-            <h4>Shopping Cart Preview</h4>
-            <ul>
-    `;
-    for (let i = 0; i < 5; i++) {
-        if (model.shoppingList[model.userID][i]) {
-            html += `
-                <li>${model.shoppingList[model.userID][i].item}</li>
-            `;
-        }
-        else {}
-    }
-    html += `
-        </ul>
-    </div>
-    `;
+        </div>`;
     document.getElementById('app').innerHTML = html;
 }
 

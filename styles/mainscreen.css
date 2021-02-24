@@ -13,28 +13,41 @@
 
 #header {
     position: relative;
-    left: 220px;
+    left: 120px;
 }
 
 #suggestedMeals {
-    background-color: lightgreen;
+    background-color: #caeee3;
     border: solid 4px black;
     height: fit-content;
     text-align: center;
     padding-bottom: 20px;
+    padding: 20px;
 }
 
 .green {
-    background-color: lightgreen;
+    background-color: #caeee3;
+    font-size: 1;
 }
 
 #suggestedMeals #suggestedMealsButton {
-    height: 120px;
+    height: 60px;
     width: 600px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     font-size: 1.8em;
     border-radius: 30px;
     font-weight: 900;
+    
+    
+}
+
+button {
+    background-color: rgb(216, 215, 215);
+}
+
+.buttonHover {
+    font-size: 1.2em;
 }
 
 #randomMealButton {
@@ -47,14 +60,21 @@
 
 #navigateButtons {
     position: relative;
-    left: 0px;
+    left: 170px;
     bottom: -10px;
 }
 
-#storageButton {
+#navigateButtons button {
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* #storageButton {
     position: relative;
     bottom: -20px;
-    left: 320px;
+    left: 310px;
     width: 300px;
     height: 80px;
     font-size: 1.2em;
@@ -66,7 +86,7 @@
 #savedMealsButton {
     position: relative;
     bottom: -120px;
-    left: 10px;
+    left: 0px;
     width: 300px;
     height: 80px;
     font-size: 1.2em;
@@ -81,7 +101,7 @@
     height: 80px;
     font-size: 1.2em;
     border-radius: 30px;
-}
+} */
 
 #suggestedMealHeader {
     text-transform: uppercase;
@@ -122,7 +142,7 @@
 }
 
 @media only screen and (max-width: 1322px) {
-    #mainContent {
+    /* #mainContent {
         left: 20vw;
     }
     #header {
@@ -132,9 +152,12 @@
     }
     #suggestedMeals {
         width: 60vw;
-        margin-right: 10vw;
-    }
+        margin-right: 0;
+    } */
+
     #navigateButtons {
+        position: relative;
+        left: 0px;
         width: 60vw;
         display: flex;
         flex-direction: column;
@@ -173,7 +196,7 @@
         text-align: center;
     }
     #suggestedMeals {
-        width: 300px;
+        width: 260px;
         margin-right: 10vw;
     }
     #navigateButtons {
@@ -192,7 +215,7 @@
     }
     #suggestedMeals #suggestedMealsButton {
         height: 40px;
-        width: 60%;
+        width: 80%;
         margin-top: 1px;
         font-size: 1.8em;
         border-radius: 30px;
