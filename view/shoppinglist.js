@@ -26,10 +26,10 @@ function shoppinglistView() {
                 <tr>
                     <td>${model.shoppingList[model.userID][i].item ? model.shoppingList[model.userID][i].item :
                         '<input type="text" onchange="model.shoppingList[model.userID]['+i+'].item = this.value">'}</td>
-                    <td><input type="text" onchange="model.shoppingList[model.userID][${i}].quantity = this.value"></td>
-                    <td><input type="date" onchange="model.shoppingList[model.userID][${i}].date = this.value"></td>
-                    <td><button onclick="removeShoppinglistItem(${i})">X</button></td>
-                    <td><button id="permanentlyRemoveButton" onclick="permanentlyBanItem(${i})">Permanently remove</button></td>
+                    <td><input type="text" class="inputField" onchange="model.shoppingList[model.userID][${i}].quantity = this.value"></td>
+                    <td><input type="date" class="inputField" onchange="model.shoppingList[model.userID][${i}].date = this.value"></td>
+                    <td><button class="buttonHover" onclick="removeShoppinglistItem(${i})">X</button></td>
+                    <td><button id="permanentlyRemoveButton" class="buttonHover" onclick="permanentlyBanItem(${i})">Permanently remove</button></td>
                 </tr>
             `;
         }
