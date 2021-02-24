@@ -9,6 +9,10 @@
     left: 15vw;
     top: 15vh;
 }
+.checkmark {
+    font-size: 6em;
+    color: green;
+}
 #suggestedMealDiv2 {
     left: 55vw;
     top: 15vh;

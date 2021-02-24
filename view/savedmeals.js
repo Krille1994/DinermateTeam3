@@ -1,7 +1,7 @@
 function savedMealsView() {
-    let html = '<button id="savedMealsBackButton" onclick="mainScreenView()">Go Back</button>';
+    let html = '<button id="savedMealsBackButton" class="buttonHover" onclick="mainScreenView()">Go Back</button>';
     if (model.savedMealsValues.loopEnd != 8) {
-        html += '<button id="savedMealsLeftButton" onclick="savedMealsDisplayNewMeals(false)">Left</button>';
+        html += '<button id="savedMealsLeftButton" class="buttonHover" onclick="savedMealsDisplayNewMeals(false)">Left</button>';
     }
     for (let i = model.savedMealsValues.loopStart; i < model.savedMealsValues.loopEnd; i++) {
         if (model.savedMeals[model.userID][i] == undefined) {
@@ -84,13 +84,13 @@ function savedMealsView() {
     }
     if (model.savedMealsValues.loopEnd < model.savedMeals[model.userID].length) {
         html += `
-            <button id="savedMealsRightButton" onclick="savedMealsDisplayNewMeals(true)">Right</button>
+            <button id="savedMealsRightButton" class="buttonHover" onclick="savedMealsDisplayNewMeals(true)">Right</button>
         `;
     }
     html += `
-        <button id="savedMealsDeleteButton" ${model.savedMealsValues.index !== false? '' : 'disabled'} onclick="deleteMeal()">Delete Meal</button>
-        <button id="savedMealsChangeButton" ${model.savedMealsValues.index !== false ? '' : 'disabled'} onclick="changeMeal()">Change Meal</button>
-        <button id="savedMealsCreateButton" onclick="createMealView()">Create New Meal</button>
+        <button id="savedMealsDeleteButton" class="buttonHover" ${model.savedMealsValues.index !== false? '' : 'disabled'} onclick="deleteMeal()">Delete Meal</button>
+        <button id="savedMealsChangeButton" class="buttonHover" ${model.savedMealsValues.index !== false ? '' : 'disabled'} onclick="changeMeal()">Change Meal</button>
+        <button id="savedMealsCreateButton" class="buttonHover" onclick="createMealView()">Create New Meal</button>
     `;
 
     document.getElementById('app').innerHTML = html;

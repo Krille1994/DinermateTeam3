@@ -4,7 +4,7 @@
 
 function shoppinglistView() {
     let html = `
-        <button onclick="mainScreenView()">Go Back</button>
+        <button onclick="mainScreenView()" class="buttonHover">Go Back</button>
         <h1>Shopping list</h1>
     `;
     if (model.shoppingList[model.userID].length === 0) {
@@ -36,8 +36,8 @@ function shoppinglistView() {
     }
     html += `
             </table>
-            <button onclick="addShoppinglistItem()">Add thing to buy +</button>
-            <button onclick="sendToStorage()">Update storage</button>
+            <button onclick="addShoppinglistItem()" class="buttonHover">Add thing to buy +</button>
+            <button onclick="sendToStorage()" class="buttonHover">Update storage</button>
     `;
 
 

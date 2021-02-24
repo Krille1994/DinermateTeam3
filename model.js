@@ -74,7 +74,16 @@ const model = {
                         optional: true,
                     },
                 ],
-                recipe: ``,
+                recipe: `
+                        1. Sett stekeovnen på 200 grader.
+                        2. Krydre kyllingen med salt og pepper.
+                        3. Sett vann til kok.
+                        4. Stek kylling midt i ovnen 20-25 min.
+                        5. Legg boil-in-bag i kokende vann.
+                        6. Tilsett broccoli når det er 5 min igjen av koketid til risen.
+                        7. Lag saus
+                        8. Kos deg!
+                        `,
             },
             {
                 mealName: 'temporary1',

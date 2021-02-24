@@ -20,14 +20,14 @@
 }
 
 #addItemToStorage {
-    background-color: lightgreen;
+    background-color: #caeee3;
     font-size: 0.5em;
     position: relative;
     width: 510px;
 }
 
 #addItemToStorage label {
-    background-color: lightgreen;
+    background-color: #caeee3;
     position: inherit;
     left: -0px;
 }
@@ -47,9 +47,9 @@
 #storageContent {
     position: relative;
     top: 20px;
-    background-color: lightgreen;
+    background-color: #caeee3;
     border: solid 1px black;
-    height: 880px;
+    height: 869px;
     overflow: auto;
     width: 600px;
     margin: 10px;
@@ -72,7 +72,7 @@
 }
 
 #addNewItem {
-    background-color: lightgreen;
+    background-color: #caeee3;
     border: solid 1px black;
     font-size: 1.5em;
     text-align: center;
@@ -227,7 +227,7 @@
 
     #addNewItem {
         position: absolute;
-        top: 0px;
+        top: 40px;
         left: 0px;
         width: 250px;
         
@@ -247,6 +247,7 @@
     #saveToStorageButton {
         position: relative;
         top: 40px;
+        left: 10px;
     }
 }
 
