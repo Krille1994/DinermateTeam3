@@ -18,7 +18,8 @@ function startCookingView(index, bool) {
         <div>
             <h1 id="startCookingRecipe">Recipe:</h1>
             <div id="startCookingRecipeText">
-                ${model.savedMeals[model.userID][index].recipe}
+                <pre>${model.savedMeals[model.userID][index].recipe}
+                </pre>
             </div>
         </div>
     `;
