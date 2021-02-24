@@ -16,6 +16,5 @@ function loginView(error) {
     <button onclick="checkLogin()">Login</button>
     <button onclick="registerView()">Register</button>
     </div>
-    <div id="footer">Created by: <a href="mailto:team3consulting@example.com">TEAM3 Consulting AS</a></div>
   `;
 }
