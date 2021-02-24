@@ -46,7 +46,7 @@ function mainScreenSuggestedMeal() {
         }
         else if (missingIngredients == 0) {
             html = `<h3 class="green">${model.savedMeals[model.userID][i].mealName}</h3>
-                    <div class="green">Ready to cook!</div>`;
+                    <div class="green checkmark">✔</div>`;
             obj = {info: html, index: i};
             listOfMeals.push(obj);
         }
