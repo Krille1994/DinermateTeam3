@@ -53,7 +53,7 @@ function createMealView(mealChange) {
     
     <div id="createRecipeDiv" style="float: right; width: 40%; height: 90%;">
         <h1>Recipe:</h1>
-        <textarea id="createMealTextarea" rows ="30" value="${model.createMeal.recipe}" onchange="model.createMeal.recipe = this.value"></textarea>
+        <textarea id="createMealTextarea" rows ="30" onchange="model.createMeal.recipe = this.innerHTML">${model.createMeal.recipe}</textarea>
     </div>
     `;
     document.getElementById('app').innerHTML = html;
