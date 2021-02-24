@@ -76,7 +76,7 @@ function suggestedMealsCreateHtml(sugMeals, sugIngr) {
             html += `
                         <div id="suggestedMealDiv${number}" class="suggestedMealDivs">
                             <h1 class="sugMealName">${sugMeals[i].name}</h1>
-                            <div class="sugMealIngredients">Green Checkmark</div>
+                            <div class="sugMealIngredients checkmark">✔</div>
                             <button class="suggestedStartCookingButton" onclick="startCookingView(${sugMeals[i].index}, false)">Start Cooking</button>
                         </div>
                     `;
