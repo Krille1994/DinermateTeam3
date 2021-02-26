@@ -86,54 +86,6 @@ const model = {
                         `,
             },
             {
-                mealName: 'temporary1',
-                ingredients: [
-                    {
-                        ingredient: 'Minced Meat',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                ],
-                recipe: '',
-            },
-            {
-                mealName: 'temporary2',
-                ingredients: [
-                    {
-                        ingredient: 'Minced Meat',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                ],
-                recipe: '',
-            },
-            {
-                mealName: 'temporary3',
-                ingredients: [
-                    {
-                        ingredient: 'Minced Meat',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                    {
-                        ingredient: 'Missing Ingredient',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                    {
-                        ingredient: 'Missing Ingredient',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                    {
-                        ingredient: 'Missing Ingredient',
-                        quantity: '400g',
-                        optional: false,
-                    },
-                ],
-                recipe: '',
-            },
-            {
                 mealName: 'Taco',
                 ingredients: [
                     {
@@ -239,6 +191,7 @@ const model = {
                         optional: false,
                     },
                 ],
+                recipe: '',
             },
             {
                 mealName: 'Mediterranean Lamb Burgers',
@@ -294,6 +247,7 @@ const model = {
                         optional: true,
                     },
                 ],
+                recipe: '',
             },
 
             {
@@ -350,6 +304,7 @@ const model = {
                         optional: true,
                     },
                 ],
+                recipe: '',
             },
             {
                 mealName: 'Egg, bacon & Beans',
@@ -370,6 +325,7 @@ const model = {
                         optional: false,
                     },
                 ],
+                recipe: '',
             },
             {
                 mealName: 'Chicken & Spinnach',
